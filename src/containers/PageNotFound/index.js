@@ -4,7 +4,7 @@ export default class PageNotFound extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="bg">
           <div className="site">
             <div className="sketch">
               <div className="bee-sketch red" />
