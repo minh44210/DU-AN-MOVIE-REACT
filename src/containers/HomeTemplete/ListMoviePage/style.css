@@ -1,0 +1,30 @@
+.renderListMoive {
+  padding: 30px 100px;
+}
+.lichChieu {
+  color: #fff;
+  font-size: 30px;
+}
+h3.lichChieu:hover {
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+}
+@media screen and (max-width: 500px) {
+  .renderListMoive {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 200px) {
+  .movie-card2 {
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .movie-card2 {
+    padding: -30px -100px -100px;
+    width: 400px;
+    height: 500px;
+    /* margin: 35px; */
+  }
+}

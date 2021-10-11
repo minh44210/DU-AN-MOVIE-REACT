@@ -26,7 +26,7 @@
 }
 
 .navbar-light .navbar-brand {
-  color: #fff;
+  color: #dd003f;
   font-size: 25px;
   text-transform: uppercase;
   font-weight: bold;
@@ -45,7 +45,6 @@
   color: #fff;
 }
 .bg-nav2 {
-  background-color: rgb(0, 0, 0);
   width: auto;
   height: auto;
   z-index: 9;
@@ -54,8 +53,11 @@
 .bg-nav {
   position: absolute;
   width: 100%;
-  /* height: 100px; */
-  background-color: rgb(0, 0, 0);
+  /* height: 80px; */
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: #0c2738d3;
   z-index: 1;
   position: fixed;
 }
@@ -87,20 +89,6 @@
   color: #fff;
 }
 
-/* .img2 {
-  background-image: url(./img/thumb-1920-1003220.png);
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.img3 {
-  background-image: url(./img/wallpapersden.com_squid-game-2021_2048x1152.jpg);
-  max-width: 100%;
-  height: 100%;
-} */
-.img1 {
-  background-image: url(./img/oblivion-poster-phim-hinh-nen-1920x1080_48.jpg);
-}
 .player-wrapper {
   position: relative;
   padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
@@ -111,16 +99,19 @@
   top: 0;
   left: 0;
 }
-.btn {
+.btn1 {
   border: none;
   outline: none;
   /* padding: 10px 16px; */
   cursor: pointer;
-  background-color: rgb(128, 23, 23);
+  background-color: #dd003f;
 }
 
 /* Style the active class (and buttons on mouse-over) */
 .active,
-.btn:hover {
-  color: white;
+.btn1:hover {
+  color: #dd003f;
+}
+.navbar-brand:hover {
+  color: #fff;
 }

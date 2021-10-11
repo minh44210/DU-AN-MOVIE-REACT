@@ -3,11 +3,17 @@ import AboutPage from "../containers/HomeTemplete/AboutPage";
 import HomePage from "../containers/HomeTemplete/HomePage";
 import ListMoviePage from "../containers/HomeTemplete/ListMoviePage";
 import { Route } from "react-router-dom";
+import DetailMoive from "../containers/HomeTemplete/DetailMoive";
 
 const routesHome = [
   {
     exact: true,
     path: "/home",
+    component: HomePage,
+  },
+  {
+    exact: true,
+    path: "/",
     component: HomePage,
   },
   {
@@ -19,6 +25,11 @@ const routesHome = [
     exact: false,
     path: "/movie-list",
     component: ListMoviePage,
+  },
+  {
+    exact: false,
+    path: "/detail/:id",
+    component: DetailMoive,
   },
 ];
 // const routesAdmin = [];

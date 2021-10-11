@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PageNotFound from "./containers/PageNotFound";
 import { renderRoutesHome } from "./routes";
 import Navbar from "./containers/HomeTemplete/_component/Navbar";
+import Footer from "./containers/HomeTemplete/_component/footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         {/* Trang không tồn tại  */}
         <Route path="" component={PageNotFound} />
       </Switch>
+      <Footer />
     </BrowserRouter>
   );
 }

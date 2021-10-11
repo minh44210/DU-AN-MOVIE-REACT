@@ -11,25 +11,22 @@ ul {
   list-style-type: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  font-weight: 400;
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
 
+.movie-title {
+  text-transform: uppercase;
+}
 a:hover {
   color: #23719e;
   text-decoration: none;
 }
-
+.container2 {
+  margin: 0 auto;
+  padding: 0 1em;
+}
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,35 +41,36 @@ a:hover {
   -ms-flex-pack: center;
   justify-content: center;
 }
-
-.movie-card {
-  background: #ffffff;
-  box-shadow: 0px 6px 10px rgba(51, 41, 41, 0.1);
-  width: 100%;
-  width: 375px;
-  /* padding: 30px; */
-  /* margin: 3em; */
-  margin: 20px 60px 30px;
-  margin-right: 20px;
-  height: 550px;
-  border-radius: 10px;
-  display: inline-block;
+h3.movie-title {
+  font-size: 16px;
 }
 
+.movie-card {
+  background: #fffafa;
+  box-shadow: 0px 6px 10px rgba(238, 238, 238, 0.315);
+  max-width: 265px;
+  width: 265px;
+  /* padding: 30px; */
+  /* margin: 3em; */
+  align-items: center;
+  margin: 20px 0px 10px 0px;
+  /* margin-right: 20px; */
+  height: 530px;
+  /* border-radius: 5px; */
+  display: inline-block;
+  cursor: pointer;
+}
+.yellow-color {
+  color: rgb(245, 197, 24);
+}
 .movie-header {
   padding: 0;
   margin: 0;
   height: 357px;
   width: 100%;
   display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  /* border-radius: 5px; */
 }
-/* 
-.manOfSteel {
-  background: url("http://henrycavill.org/images/Films/2013-Man-of-Steel/posters/3-Walmart-Superman-a.jpg");
-  background-size: cover;
-} */
 
 .header-icon-container {
   position: relative;
@@ -80,34 +78,36 @@ a:hover {
 
 .header-icon {
   width: 100%;
-  height: 367px;
+  height: 357px;
   line-height: 367px;
-  text-align: start;
+  text-align: center;
   vertical-align: middle;
-  margin: 0 auto;
+  margin-top: 0px;
+  /* margin: 0 auto; */
   color: #ffffff;
   font-size: 54px;
-  text-shadow: 0px 0px 20px #6abcea, 0px 5px 20px #6abcea;
-  opacity: 0.85;
+  text-shadow: 0px 0px 20px #307eac, 0px 5px 20px #6abcea;
+  opacity: 0;
 }
 
 .header-icon:hover {
-  background: rgba(0, 0, 0, 0.15);
-  font-size: 74px;
-  text-shadow: 0px 0px 20px #6abcea, 0px 5px 30px #6abcea;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  box-shadow: rgb(0, 0, 0) 20px -130px 150px -28px inset;
+  font-size: 84px;
+  text-shadow: 0px 0px 20px #6abbea4d, 0px 5px 30px #6abbea63;
+  /* border-top-left-radius: 2px; */
+  /* border-top-right-radius: 1px; */
   opacity: 1;
+  margin-right: 30px;
 }
 
 .movie-card:hover {
   -webkit-transform: scale(1.03);
   transform: scale(1.03);
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(226, 226, 226, 0.432) 0px 2px 4px 0px inset;
 }
 
 .movie-content {
-  padding: 18px 18px 24px 18px;
+  padding: 30px 22px 24px 18px;
   margin: 0;
 }
 
@@ -124,13 +124,12 @@ a:hover {
 }
 
 .imax-logo {
-  width: 70px;
+  width: 40px;
   height: 40px;
   background: url("https://inthienha.com/wp-content/uploads/CGV-Cinemas.png")
     no-repeat;
   background-size: contain;
   display: table-cell;
-  float: right;
   position: relative;
   margin-top: 0px;
 }
@@ -156,7 +155,7 @@ a:hover {
 .info-section label {
   display: block;
   color: rgba(0, 0, 0, 0.5);
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   font-size: 9px;
 }
 
@@ -167,22 +166,31 @@ a:hover {
 
 @media screen and (max-width: 500px) {
   .movie-card {
-    width: 95%;
-    max-width: 95%;
-    margin: 60px;
+    width: 400px;
+    margin: 55px;
     display: block;
   }
 }
+@media screen and (max-width: 1200px) {
+  .movie-card {
+    width: 400px;
+    margin-left: 100px;
+    margin-top: 20px;
+    /* display: block; */
+  }
+}
+
 @media screen and (max-width: 400px) {
   .movie-card2 {
-    width: 90%;
-    max-width: 90%;
-    margin: 30px;
+    width: 85%;
+    padding: 0;
+    margin-left: 35px;
+    margin-top: 120px;
     display: block;
   }
 
   .movie-header {
-    height: 207px;
+    height: 357px;
     width: 100%;
     display: block;
   }
@@ -192,5 +200,6 @@ a:hover {
   margin: 0;
 }
 body {
-  background-color: #f0f0f0;
+  /* background-color: #081b27; */
+  background-image: url(http://html.bdiakcml8h-e92498n216kr.p.runcloud.link/blockbuster/images/uploads/slider-bg.jpg);
 }

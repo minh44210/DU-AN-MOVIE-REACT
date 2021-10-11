@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Moive from "./MoiveCard";
-// import Loadings from "../../../component/Loader";
+import Loadings from "../../../component/Loader";
 import * as action from "./Modules/actions";
 import { connect } from "react-redux";
+import "./style.css";
+import Carousel from "../Carousel";
+
 class ListMoviePage extends Component {
   // CALL API
   componentDidMount() {
@@ -24,10 +27,11 @@ class ListMoviePage extends Component {
         this.props.failed(error);
       });
   }
+
   renderListMoive = () => {
     const { data, loading } = this.props;
-    if (loading) return;
-    return data?.slice(0, 8).map((movie) => {
+    if (loading) return <Loadings />;
+    return data?.slice(0, 12).map((movie) => {
       return <Moive key={movie.maPhim} moive={movie} />;
     });
   };
@@ -36,10 +40,10 @@ class ListMoviePage extends Component {
   render() {
     return (
       <div className="container">
-        <span style={{ paddingTop: 50, marginRight: 20 }}>
-          <h3 className="lichChieu"> Phim Sắp chiếu</h3>
+        <span style={{ paddingTop: 50, paddingBottom: -100, marginRight: 20 }}>
+          <h3 className="lichChieu"> PHIM SẮP CHIẾU</h3>
         </span>
-        <div className="row">{this.renderListMoive()}</div>
+        <div className="row renderListMoive">{this.renderListMoive()}</div>
       </div>
     );
   }

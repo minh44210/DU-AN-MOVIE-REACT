@@ -30,7 +30,7 @@ export default class Navbar extends Component {
                   <li className=" nav-item active mr-3">
                     <NavLink
                       exact
-                      activeClassName="btn"
+                      activeClassName="btn1"
                       className="nav-link"
                       to="home"
                     >
@@ -39,28 +39,18 @@ export default class Navbar extends Component {
                   </li>
                   <li className="nav-item mr-3">
                     <NavLink
-                      activeClassName="btn"
+                      activeClassName="btn1"
                       className="nav-link"
                       to="about"
                     >
                       Tin Tức
                     </NavLink>
                   </li>
-                  {/* <li className="nav-item mr-3">
-                    <span class="oi oi-person"></span>
-                    <NavLink
-                      activeClassName="btn"
-                      className="nav-link"
-                      to="/"
-                    >
-                      Portfolio
-                    </NavLink>
-                  </li> */}
                 </ul>
                 <ul className=" navbar-nav ml-auto">
                   <li className="nav-item">
                     <NavLink
-                      activeClassName="btn"
+                      activeClassName="btn1"
                       className="nav-link"
                       to="login"
                     >
@@ -69,7 +59,7 @@ export default class Navbar extends Component {
                   </li>
                   <li className="nav-item">
                     <NavLink
-                      activeClassName="btn"
+                      activeClassName="btn1"
                       className="nav-link"
                       to="dangky"
                     >
