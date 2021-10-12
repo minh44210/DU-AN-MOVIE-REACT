@@ -5,7 +5,7 @@ export const actFetchDetailMoive = (id) => {
   return (dispatch) => {
     dispatch(actDetailMoiveRequest());
     axios({
-      url: `http://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`,
+      url: `https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayThongTinPhim?MaPhim=${id}`,
       method: "GET",
       headers: {
         TokenCybersoft:

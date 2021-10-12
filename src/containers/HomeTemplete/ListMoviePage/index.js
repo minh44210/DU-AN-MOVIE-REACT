@@ -5,7 +5,6 @@ import Loadings from "../../../component/Loader";
 import * as action from "./Modules/actions";
 import { connect } from "react-redux";
 import "./style.css";
-import Carousel from "../Carousel";
 
 class ListMoviePage extends Component {
   // CALL API
@@ -13,7 +12,7 @@ class ListMoviePage extends Component {
     // pending
     this.props.request();
     axios({
-      url: "http://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP08",
+      url: "https://movienew.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim?maNhom=GP08",
       method: "GET",
       headers: {
         TokenCybersoft:

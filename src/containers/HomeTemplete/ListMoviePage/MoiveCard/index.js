@@ -27,27 +27,30 @@ export default class Moive extends Component {
             </div>
           </div>
           {/*movie-header*/}
-          <div className="movie-content">
-            <div className="movie-content-header">
-              <h3 className="movie-title">{moive.tenPhim}</h3>
-              <div className="imax-logo" />
-            </div>
-            <div className="movie-info">
-              <div className="info-section">
-                <label>Ngày &amp; Giờ</label>
-                <span>
-                  {new Date(moive.ngayKhoiChieu).toLocaleDateString()} -{" "}
-                  {new Date(moive.ngayKhoiChieu).toLocaleTimeString()}
-                </span>
+          <Link to={`detail/${moive.maPhim}`}>
+            <div className="movie-content">
+              <div className="movie-content-header">
+                <h3 className="movie-title">{moive.tenPhim}</h3>
+                <div className="imax-logo" />
               </div>
-              {/*date,time*/}
-              <div className="info-section">
-                <label>Đánh Giá</label>
-                <span> {moive.danhGia} / 10</span>{" "}
-                <i className="fa fa-star yellow-color " />
+
+              <div className="movie-info">
+                <div className="info-section">
+                  <label>Ngày &amp; Giờ</label>
+                  <span>
+                    {new Date(moive.ngayKhoiChieu).toLocaleDateString()} -{" "}
+                    {new Date(moive.ngayKhoiChieu).toLocaleTimeString()}
+                  </span>
+                </div>
+                {/*date,time*/}
+                <div className="info-section">
+                  <label>Đánh Giá</label>
+                  <span> {moive.danhGia} / 10</span>{" "}
+                  <i className="fa fa-star yellow-color " />
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
           {/*movie-content*/}
         </div>
         {/*movie-card*/}

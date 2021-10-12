@@ -23,10 +23,7 @@
 .text {
   font-size: 40px;
 }
-.btn {
-  margin-bottom: -390px;
-  margin-left: 10px !important;
-}
+
 .pp {
   margin-top: 60px;
 }
@@ -69,7 +66,11 @@
   /* height: 400px; */
   margin-top: -360px;
 }
-
+.btn-app {
+  margin-top: 10px;
+  background-color: #dd003f;
+  color: #fff;
+}
 /* REPONSIVE  */
 @media screen and (max-width: 1200px) {
   .img-bg {
@@ -91,7 +92,7 @@
   }
   .btn {
     margin-bottom: -550px;
-    margin-left: -22px !important;
+    /* margin-left: -22px !important; */
     width: 250px;
   }
   .pp {
@@ -130,7 +131,7 @@
   .text {
     font-size: 14px;
   }
-  .btn {
+  .btn-app {
     margin-bottom: -550px;
     margin-left: -35px !important;
     width: 250px;

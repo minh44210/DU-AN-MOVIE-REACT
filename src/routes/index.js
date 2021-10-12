@@ -4,6 +4,8 @@ import HomePage from "../containers/HomeTemplete/HomePage";
 import ListMoviePage from "../containers/HomeTemplete/ListMoviePage";
 import { Route } from "react-router-dom";
 import DetailMoive from "../containers/HomeTemplete/DetailMoive";
+import DetailBg from "../containers/HomeTemplete/_component/DetailBg";
+import DatVeMoive from "../containers/HomeTemplete/DatVeMoive";
 
 const routesHome = [
   {
@@ -26,6 +28,17 @@ const routesHome = [
     path: "/movie-list",
     component: ListMoviePage,
   },
+  {
+    exact: false,
+    path: "/datve",
+    component: DatVeMoive,
+  },
+  {
+    exact: false,
+    path: "/ungdung",
+    component: DetailBg,
+  },
+
   {
     exact: false,
     path: "/detail/:id",

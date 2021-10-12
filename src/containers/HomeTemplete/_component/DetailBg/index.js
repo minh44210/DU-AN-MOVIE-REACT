@@ -8,12 +8,12 @@ export default class DetailBg extends Component {
         <div className="img-bg">
           <div className="top-left">
             <div>
-              <h3 className="text">Thưởng thức trên TV của bạn. </h3>
+              <h3 className="text">Xem rạp trực tuyến trên TV của bạn. </h3>
               <p className="pp">
                 Xem trên TV thông minh, Playstation, Xbox, Chromecast, Apple TV,
                 đầu phát Blu-ray và nhiều thiết bị khác.
               </p>
-              <button type="button" class="btn btn-danger">
+              <button type="button" class="btn btn-app ">
                 App miễn phí - Tải về ngay
               </button>
               <p className="pp">

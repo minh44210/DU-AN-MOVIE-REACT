@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+
 import "./stytle.css";
 export default class Navbar extends Component {
   render() {
@@ -32,7 +33,7 @@ export default class Navbar extends Component {
                       exact
                       activeClassName="btn1"
                       className="nav-link"
-                      to="home"
+                      to="/home"
                     >
                       Trang Chủ
                     </NavLink>
@@ -41,9 +42,27 @@ export default class Navbar extends Component {
                     <NavLink
                       activeClassName="btn1"
                       className="nav-link"
-                      to="about"
+                      to="/movie-list"
                     >
-                      Tin Tức
+                      Phim
+                    </NavLink>
+                  </li>
+                  <li className="nav-item mr-3">
+                    <NavLink
+                      activeClassName="btn1"
+                      className="nav-link"
+                      to="/ungdung"
+                    >
+                      Ứng Dụng
+                    </NavLink>
+                  </li>
+                  <li className="nav-item mr-3">
+                    <NavLink
+                      activeClassName="btn1"
+                      className="nav-link"
+                      to="/datve"
+                    >
+                      Đặt Vé
                     </NavLink>
                   </li>
                 </ul>

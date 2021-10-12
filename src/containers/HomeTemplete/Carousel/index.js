@@ -14,15 +14,6 @@ export default class Carousel extends Component {
           className="carousel "
           data-ride="carousel"
         >
-          {/* <ol className="carousel-indicators">
-            <li
-              data-target="#carouselExampleIndicators"
-              data-slide-to={0}
-              className="active"
-            /> */}
-          {/* <li data-target="#carouselExampleIndicators" data-slide-to={1} /> */}
-          {/* <li data-target="#carouselExampleIndicators" data-slide-to={2} /> */}
-          {/* </ol> */}
           <div className="carousel-inner">
             <div className="carousel-item active  ">
               <div className="player-wrapper">
@@ -118,10 +109,10 @@ export default class Carousel extends Component {
                     {/* {carousel.maPhim} */}
                   </button>
                   <button className="dropdown-item" type="button">
-                    Another action
+                    TED2
                   </button>
                   <button className="dropdown-item" type="button">
-                    Something else here
+                    TRAINWRECK{" "}
                   </button>
                 </div>
               </div>
@@ -138,13 +129,13 @@ export default class Carousel extends Component {
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <button className="dropdown-item" type="button">
-                    Action
+                    CGV
                   </button>
                   <button className="dropdown-item" type="button">
-                    Another action
+                    BHD STARS
                   </button>
                   <button className="dropdown-item" type="button">
-                    Something else here
+                    GALAXY CINEMA
                   </button>
                 </div>
               </div>
@@ -161,13 +152,13 @@ export default class Carousel extends Component {
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <button className="dropdown-item" type="button">
-                    Action
+                    1/1/2019
                   </button>
                   <button className="dropdown-item" type="button">
-                    Another action
+                    12/1/2019{" "}
                   </button>
                   <button className="dropdown-item" type="button">
-                    Something else here
+                    13/1/2019
                   </button>
                 </div>
               </div>
