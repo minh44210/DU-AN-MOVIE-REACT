@@ -20,6 +20,7 @@ export default function HomePage() {
       <ListMoviePage />
       <DatVeMoive heThongRapChieu={heThongRapChieu} />
       <DetailBg />
+      {/* ĐẶT PAGE ADMIN LOGIN Ở ĐÂY  */}
     </div>
   );
 }
