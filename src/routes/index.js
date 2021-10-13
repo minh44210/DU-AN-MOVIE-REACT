@@ -6,6 +6,7 @@ import { Route } from "react-router-dom";
 import DetailMoive from "../containers/HomeTemplete/DetailMoive";
 import DetailBg from "../containers/HomeTemplete/_component/DetailBg";
 import DatVeMoive from "../containers/HomeTemplete/DatVeMoive";
+import HomeTemplate from "../containers/HomeTemplete";
 
 const routesHome = [
   {
@@ -44,16 +45,13 @@ const routesHome = [
     path: "/detail/:id",
     component: DetailMoive,
   },
-  {
-    /* ĐẶT PAGE ADMIN LOGIN Ở ĐÂY  */
-  },
 ];
 // const routesAdmin = [];
 
 function renderRoutesHome() {
   return routesHome.map((route, index) => {
     return (
-      <Route
+      <HomeTemplate
         key={index}
         exact={route.exact}
         path={route.path}

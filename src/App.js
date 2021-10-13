@@ -2,13 +2,11 @@ import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PageNotFound from "./containers/PageNotFound";
 import { renderRoutesHome } from "./routes";
-import Navbar from "./containers/HomeTemplete/_component/Navbar";
 import Footer from "./containers/HomeTemplete/_component/footer";
 import "antd/dist/antd.css";
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <Switch>
         {renderRoutesHome()}
         {/* Trang chủ */}

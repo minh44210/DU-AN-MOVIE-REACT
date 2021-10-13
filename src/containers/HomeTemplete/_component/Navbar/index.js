@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 
 import "./stytle.css";
-export default class Navbar extends Component {
+export default class NavbarHome extends Component {
   render() {
     return (
       <div>
