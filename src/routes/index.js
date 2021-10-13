@@ -2,7 +2,7 @@
 import AboutPage from "../containers/HomeTemplete/AboutPage";
 import HomePage from "../containers/HomeTemplete/HomePage";
 import ListMoviePage from "../containers/HomeTemplete/ListMoviePage";
-import { Route } from "react-router-dom";
+// import { Route } from "react-router-dom";
 import DetailMoive from "../containers/HomeTemplete/DetailMoive";
 import DetailBg from "../containers/HomeTemplete/_component/DetailBg";
 import DatVeMoive from "../containers/HomeTemplete/DatVeMoive";
@@ -14,6 +14,7 @@ const routesHome = [
     path: "/home",
     component: HomePage,
   },
+
   {
     exact: true,
     path: "/",
