@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import PageNotFound from "./containers/PageNotFound";
 import { renderRoutesHome, renderRoutesAdmin } from "./routes";
+
 import "antd/dist/antd.css";
 
 function App() {
@@ -21,4 +22,5 @@ function App() {
 			</Switch>
 		</BrowserRouter>
 	);
+}
 export default App;

@@ -11,7 +11,7 @@ export default function HomeTemplate(props) {
 			<Navbar />
 
 			<Route exact={exact} path={path} component={component} />
-			<Footer />		
+			<Footer />
 		</>
 	);
 }
