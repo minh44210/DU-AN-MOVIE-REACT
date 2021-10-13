@@ -44,6 +44,9 @@ const routesHome = [
     path: "/detail/:id",
     component: DetailMoive,
   },
+  {
+    /* ĐẶT PAGE ADMIN LOGIN Ở ĐÂY  */
+  },
 ];
 // const routesAdmin = [];
 
