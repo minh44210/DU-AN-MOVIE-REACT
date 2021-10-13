@@ -11,9 +11,7 @@
 .carousel-caption {
   bottom: 270px;
 }
-body {
-  /* padding: 0; */
-}
+
 .carousel-caption h5 {
   font-size: 45px;
   text-transform: uppercase;
@@ -96,8 +94,7 @@ body {
 }
 
 /*search box css start here*/
-.warp-bg {
-}
+
 #outer {
   display: flex;
   justify-content: center;
@@ -106,7 +103,6 @@ body {
 .dropdown {
   display: flex;
   position: relative;
-  /* width: 200px; */
 }
 #dropdownMenu1 {
   border-radius: 0;

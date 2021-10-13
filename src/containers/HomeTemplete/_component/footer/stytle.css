@@ -5,9 +5,7 @@
   line-height: 24px;
   color: #737373;
 }
-* {
-  transition: 200ms;
-}
+
 .text-justify {
   width: 85%;
 }
