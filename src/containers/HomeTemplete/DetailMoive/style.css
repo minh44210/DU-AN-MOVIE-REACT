@@ -64,9 +64,7 @@ ul {
 .parent-btn {
   text-transform: capitalize;
 }
-h2 {
-  /* display: block; */
-}
+
 /* ION HEAR ICON  */
 .social-btn {
   display: -webkit-flex;
@@ -246,6 +244,10 @@ h2 {
     display: none;
   }
 }
-body {
-  background-color: #0f2133 !important;
+.warp-detail .container {
+  width: 100%;
+  height: 100%;
+}
+.name {
+  color: #fff;
 }
