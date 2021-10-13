@@ -1,23 +1,17 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import Navbar from "./_component/Navbar";
-import PageNotFound from "../PageNotFound/index";
-
+// import PageNotFound from "../PageNotFound/index";
+import Footer from "./_component/footer";
 export default function HomeTemplate(props) {
-  const { exact, path, component } = props;
+	const { exact, path, component } = props;
 
-  function LayoutHome(props) {
-    return (
-      <>
-        <Navbar />
-        {props.children}
-      </>
-    );
-  }
+	return (
+		<>
+			<Navbar />
 
-  return (
-    <LayoutHome>
-      <Route exact={exact} path={path} component={component} />
-    </LayoutHome>
-  );
+			<Route exact={exact} path={path} component={component} />
+			<Footer />
+		</>
+	);
 }
