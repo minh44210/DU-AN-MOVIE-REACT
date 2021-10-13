@@ -4,7 +4,7 @@ import "./style.css";
 export default class DetailBg extends Component {
   render() {
     return (
-      <div className="warp">
+      <div style={{ backgroundColor: "#08131d" }} className="warp">
         <div className="img-bg">
           <div className="top-left">
             <div>

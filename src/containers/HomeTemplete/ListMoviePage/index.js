@@ -38,11 +38,15 @@ class ListMoviePage extends Component {
   // RENDER GIAO DIEN
   render() {
     return (
-      <div className="container">
-        <span style={{ paddingTop: 50, paddingBottom: -100, marginRight: 20 }}>
-          <h3 className="lichChieu"> PHIM SẮP CHIẾU</h3>
-        </span>
-        <div className="row renderListMoive">{this.renderListMoive()}</div>
+      <div style={{ backgroundColor: "#08131d" }}>
+        <div className="container">
+          <span
+            style={{ paddingTop: 50, paddingBottom: -100, marginRight: 20 }}
+          >
+            <h3 className="lichChieu"> PHIM SẮP CHIẾU</h3>
+          </span>
+          <div className="row renderListMoive">{this.renderListMoive()}</div>
+        </div>
       </div>
     );
   }

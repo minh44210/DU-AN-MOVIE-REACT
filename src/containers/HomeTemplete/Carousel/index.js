@@ -7,7 +7,7 @@ export default class Carousel extends Component {
     const { carousel } = this.props;
 
     return (
-      <div>
+      <div style={{ backgroundColor: "#08131d" }}>
         {/* CAROUSEL  */}
         <div
           id="carouselExampleIndicators"

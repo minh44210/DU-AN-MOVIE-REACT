@@ -64,8 +64,10 @@ export default class DatVeMoive extends React.Component {
   render() {
     const { tabPosition } = this.state;
     return (
-      <div className="all-tab">
-        <Tabs tabPosition={tabPosition}>{this.renderHeThongRap()}</Tabs>
+      <div style={{ backgroundColor: "#08131d" }} className="container">
+        <div className="all-tab">
+          <Tabs tabPosition={tabPosition}>{this.renderHeThongRap()}</Tabs>
+        </div>
       </div>
     );
   }
