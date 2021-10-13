@@ -12,7 +12,7 @@ export const layDanhSachHeThongRapAction = () => {
         });
       }
     } catch (errors) {
-      console.log("errors", errors.respone?.data);
+      console.log("errors", errors.respone?.data.content);
     }
   };
 };

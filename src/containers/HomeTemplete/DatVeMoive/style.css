@@ -1,6 +1,37 @@
 body {
   background-color: #0f2133;
 }
-h2{
+h2 {
   color: rgba(245, 245, 245, 0.85) !important;
+}
+
+.text-color {
+  color: #1890ff;
+}
+
+.style-tab {
+  width: 100px;
+  display: flex;
+}
+.all-tab {
+  margin-left: 290px;
+  padding: 50px;
+  background-color: white;
+  width: 65%;
+  border-radius: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 2px 6px 10px rgb(238 238 238 / 32%);
+}
+.chitiet {
+  color: #1890ff;
+}
+@media screen and (max-width: 767px) {
+  .all-tab {
+    width: 70%;
+    height: 600px;
+    margin-top: 50px;
+    margin-left: 60px;
+    display: block;
+  }
 }

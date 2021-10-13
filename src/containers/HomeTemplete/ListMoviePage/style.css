@@ -1,5 +1,5 @@
 .renderListMoive {
-  /* padding: 30px 100px; */
+  padding-left: 50px;
 }
 .lichChieu {
   color: #fff;
@@ -10,22 +10,23 @@ h3.lichChieu:hover {
   text-align: center;
   color: #fff;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 359px) {
   .renderListMoive {
     padding: 0px;
+    /* margin-left: -90px; */
   }
 }
-@media screen and (max-width: 200px) {
-  .movie-card2 {
-    padding: 20px;
-  }
-}
-@media screen and (max-width: 1025px) {
+
+@media screen and (max-width: 767px) {
   .movie-card2 {
     padding: -30px -100px -100px;
     width: 400px;
-    height: 500px;
+    height: auto;
     /* margin: 35px; */
+  }
+  .renderListMoive {
+    width: 85%;
+    margin-right: 190px;
   }
 }
 .renderListMoive {
