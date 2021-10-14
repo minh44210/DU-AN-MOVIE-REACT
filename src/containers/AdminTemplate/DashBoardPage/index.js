@@ -1,14 +1,11 @@
 import React, { Component } from 'react'
-import { NavLink } from "react-router-dom"
-import "./index.css"
-// import Sidebar from "./../_components/Sidebar"
-export default class DashBoardPage extends Component {
+import Navbar from "./../_components/Navbar"
+export default class index extends Component {
 	render() {
 		return (
-			<div className="sidebar">
-				Hello
+			<div>
+				<Navbar />
 			</div>
 		)
-
 	}
 }
