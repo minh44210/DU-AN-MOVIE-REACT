@@ -45,6 +45,16 @@ export default class DatVeMoive extends React.Component {
                         className="text-left ml-2 "
                       >
                         {cumRap.tenCumRap}
+
+                        <p
+                          style={{
+                            color: "black",
+                            fontSize: 11,
+                            opacity: "70%",
+                          }}
+                        >
+                          {cumRap.diaChi}
+                        </p>
                         <p className="chitiet">Chi Tiết</p>
                       </div>
                     </div>
@@ -67,25 +77,35 @@ export default class DatVeMoive extends React.Component {
                               alt={phim.tenPhim}
                             />
                             <div>
-                              <h5 className="ml-3">{phim.tenPhim}</h5>
-                              <p style={{ color: "black" }} className="ml-3">
+                              <h5
+                                style={{ textTransform: "uppercase" }}
+                                className="ml-3"
+                              >
+                                {phim.tenPhim} - PHIM HOT
+                              </h5>
+                              <p
+                                style={{ color: "black", opacity: "70%" }}
+                                className="ml-3"
+                              >
                                 {cumRap.diaChi}
                               </p>
                               {phim.lstLichChieuTheoPhim
                                 ?.slice(0, 6)
                                 .map((lichchieu, index) => {
                                   return (
-                                    <span className="text-lichchieu">
-                                      <NavLink
-                                        style={{ color: "1890ff" }}
-                                        to="/"
-                                        key={index}
-                                      >
-                                        {moment(
-                                          lichchieu.ngayChieuGioChieu
-                                        ).format("hh:mm A")}
-                                      </NavLink>
-                                    </span>
+                                    <button className="button-66 text-lichchieu">
+                                      <span className="text-lichchieu">
+                                        <NavLink
+                                          style={{ color: "1890ff" }}
+                                          to="/"
+                                          key={index}
+                                        >
+                                          {moment(
+                                            lichchieu.ngayChieuGioChieu
+                                          ).format("hh:mm A")}
+                                        </NavLink>
+                                      </span>
+                                    </button>
                                   );
                                 })}
                             </div>

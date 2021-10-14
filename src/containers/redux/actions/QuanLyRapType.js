@@ -1,1 +1,1 @@
-export const SET_HE_THONG_RAP_CHIEU = "SET_HE_THONG_RAP_CHIEU";
+export const HE_THONG_RAP = "@HE_THONG_RAP";

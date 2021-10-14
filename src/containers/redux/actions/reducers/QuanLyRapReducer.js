@@ -1,4 +1,4 @@
-import { SET_HE_THONG_RAP_CHIEU } from "../QuanLyRapType";
+import { HE_THONG_RAP } from "../QuanLyRapType";
 
 const stateDefault = {
   heThongRapChieu: [],
@@ -6,7 +6,7 @@ const stateDefault = {
 
 export const QuanlyRapReducer = (state = stateDefault, action) => {
   switch (action.type) {
-    case SET_HE_THONG_RAP_CHIEU: {
+    case HE_THONG_RAP: {
       state.heThongRapChieu = action.heThongRapChieu;
       return { ...state };
     }

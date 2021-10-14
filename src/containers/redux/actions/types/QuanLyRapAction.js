@@ -1,5 +1,5 @@
 import { quanLyRapService } from "../services/QuanlyRap";
-import { SET_HE_THONG_RAP_CHIEU } from "../QuanLyRapType";
+import { HE_THONG_RAP } from "../QuanLyRapType";
 export const layDanhSachHeThongRapAction = () => {
   return async (dispatch) => {
     try {
@@ -7,7 +7,7 @@ export const layDanhSachHeThongRapAction = () => {
       console.log("resutl", result.data.content);
       if (result.status === 200) {
         dispatch({
-          type: SET_HE_THONG_RAP_CHIEU,
+          type: HE_THONG_RAP,
           heThongRapChieu: result.data.content,
         });
       }
