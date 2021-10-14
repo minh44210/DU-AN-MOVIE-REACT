@@ -118,7 +118,7 @@
 }
 @media screen and (max-width: 550px) {
   .img-bg {
-    margin-top: 20px;
+    margin-top: -20px;
     height: 500px;
     max-width: 100%;
   }
@@ -157,3 +157,5 @@
     margin-bottom: -120px;
   }
 }
+
+

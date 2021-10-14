@@ -7,76 +7,57 @@ import DetailMoive from "../containers/HomeTemplete/DetailMoive";
 import DetailBg from "../containers/HomeTemplete/_component/DetailBg";
 import DatVeMoive from "../containers/HomeTemplete/DatVeMoive";
 import HomeTemplate from "../containers/HomeTemplete";
-import AdminTemplate from "../containers/AdminTemplate"
-import DashBoardPage from "../containers/AdminTemplate/DashBoardPage"
-const routesHome = [
-	{
-		exact: true,
-		path: "/home",
-		component: HomePage,
-	},
-	{
-		exact: true,
-		path: "/",
-		component: HomePage,
-	},
-	{
-		exact: false,
-		path: "/about",
-		component: AboutPage,
-	},
-	{
-		exact: false,
-		path: "/movie-list",
-		component: ListMoviePage,
-	},
-	{
-		exact: false,
-		path: "/datve",
-		component: DatVeMoive,
-	},
-	{
-		exact: false,
-		path: "/ungdung",
-		component: DetailBg,
-	},
 
-	{
-		exact: false,
-		path: "/detail/:id",
-		component: DetailMoive,
-	},
-];
-const routesAdmin = [
-	{
-		exact: false,
-		path: "/dashboard",
-		component: DashBoardPage,
-	},
+const routesHome = [
+  {
+    exact: true,
+    path: "/home",
+    component: HomePage,
+  },
+  {
+    exact: true,
+    path: "/",
+    component: HomePage,
+  },
+  {
+    exact: false,
+    path: "/about",
+    component: AboutPage,
+  },
+  {
+    exact: false,
+    path: "/movie-list",
+    component: ListMoviePage,
+  },
+  {
+    exact: false,
+    path: "/datve",
+    component: DatVeMoive,
+  },
+  {
+    exact: false,
+    path: "/ungdung",
+    component: DetailBg,
+  },
+
+  {
+    exact: false,
+    path: "/detail/:id",
+    component: DetailMoive,
+  },
 ];
 
 function renderRoutesHome() {
-	return routesHome.map((route, index) => {
-		return (
-			<HomeTemplate
-				key={index}
-				exact={route.exact}
-				path={route.path}
-				component={route.component}
-			/>
-		);
-	});
+  return routesHome.map((route, index) => {
+    return (
+      <HomeTemplate
+        key={index}
+        exact={route.exact}
+        path={route.path}
+        component={route.component}
+      />
+    );
+  });
 }
-function renderRoutesAdmin() {
-	return routesAdmin.map((route, index) => {
-		return (
-			<AdminTemplate
-				key={index}
-				exact={route.exact}
-				path={route.path}
-				component={route.component}
-			/>
-		);
-	});
-}
-export { renderRoutesHome, renderRoutesAdmin };
+
+export { renderRoutesHome };
