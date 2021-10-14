@@ -33,7 +33,9 @@
   letter-spacing: 2px;
   height: 100%;
 }
-
+.navbar-light .navbar-brand:hover {
+  color: #fff;
+}
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
@@ -110,7 +112,7 @@
 /* Style the active class (and buttons on mouse-over) */
 .active,
 .btn1:hover {
-  color: #dd003f;
+  color: #1890ff;
 }
 .navbar-brand:hover {
   color: #fff;

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 // import { actFetchDatVeMoive } from "./Modules/action";
 import { Tabs, Radio, Space } from "antd";
-import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+
 import "./style.css";
+import moment from "moment";
 
 const { TabPane } = Tabs;
 
@@ -50,8 +52,48 @@ export default class DatVeMoive extends React.Component {
                   key={index}
                 >
                   {/* // LOAD PHIM */}
-
-                  {cumRap.danhSachPhim.map((phim, index) => {})}
+                  {cumRap.danhSachPhim.map((phim, index) => {
+                    return (
+                      <React.Fragment key={index}>
+                        <div className="warp-lichchieu ">
+                          <div
+                            style={{ display: "flex" }}
+                            className="warp-content"
+                          >
+                            <img
+                              width={50}
+                              height={50}
+                              src={phim.hinhAnh}
+                              alt={phim.tenPhim}
+                            />
+                            <div>
+                              <h5 className="ml-3">{phim.tenPhim}</h5>
+                              <p style={{ color: "black" }} className="ml-3">
+                                {cumRap.diaChi}
+                              </p>
+                              {phim.lstLichChieuTheoPhim
+                                ?.slice(0, 6)
+                                .map((lichchieu, index) => {
+                                  return (
+                                    <span className="text-lichchieu">
+                                      <NavLink
+                                        style={{ color: "1890ff" }}
+                                        to="/"
+                                        key={index}
+                                      >
+                                        {moment(
+                                          lichchieu.ngayChieuGioChieu
+                                        ).format("hh:mm A")}
+                                      </NavLink>
+                                    </span>
+                                  );
+                                })}
+                            </div>
+                          </div>
+                        </div>
+                      </React.Fragment>
+                    );
+                  })}
                 </TabPane>
               );
             })}

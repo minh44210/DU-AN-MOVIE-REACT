@@ -20,6 +20,16 @@
 .chitiet {
   color: #1890ff;
 }
+.warp-lichchieu {
+}
+.warp-content h5 {
+  font-size: 18px;
+}
+.text-lichchieu {
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
 @media screen and (max-width: 767px) {
   .all-tab {
     width: 90%;
