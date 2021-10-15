@@ -69,7 +69,9 @@ h3.movie-title {
   display: block;
   /* border-radius: 5px; */
 }
-
+.span-moviecard {
+  margin-left: 0 !important;
+}
 .header-icon-container {
   position: relative;
 }

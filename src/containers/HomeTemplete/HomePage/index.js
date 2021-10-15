@@ -6,6 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 
 import { layDanhSachHeThongRapAction } from "../../redux/actions/types/QuanLyRapAction";
+import CheckOutPage from "../../CheckOutHomeTemplate/CheckOutPage";
 
 export default function HomePage() {
   const { heThongRapChieu } = useSelector((state) => state.QuanlyRapReducer);
@@ -20,7 +21,6 @@ export default function HomePage() {
       <ListMoviePage />
       <DatVeMoive heThongRapChieu={heThongRapChieu} />
       <DetailBg />
-      {/* ĐẶT PAGE ADMIN LOGIN Ở ĐÂY  */}
     </div>
   );
 }

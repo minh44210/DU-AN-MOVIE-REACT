@@ -71,7 +71,7 @@ export default class NavbarHome extends Component {
                     <NavLink
                       activeClassName="btn1"
                       className="nav-link"
-                      to="login"
+                      to="/login"
                     >
                       Login
                     </NavLink>
@@ -80,7 +80,7 @@ export default class NavbarHome extends Component {
                     <NavLink
                       activeClassName="btn1"
                       className="nav-link"
-                      to="dangky"
+                      to="/dangky"
                     >
                       Đăng ký
                     </NavLink>

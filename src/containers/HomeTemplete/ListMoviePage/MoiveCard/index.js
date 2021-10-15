@@ -37,7 +37,7 @@ export default class Moive extends Component {
               <div className="movie-info">
                 <div className="info-section">
                   <label>Ngày &amp; Giờ</label>
-                  <span>
+                  <span className="span-moviecard">
                     {new Date(moive.ngayKhoiChieu).toLocaleDateString()} -{" "}
                     {new Date(moive.ngayKhoiChieu).toLocaleTimeString()}
                   </span>
