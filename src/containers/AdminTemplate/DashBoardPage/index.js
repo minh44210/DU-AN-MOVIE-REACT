@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
@@ -42,18 +41,6 @@ function Navbar() {
       </IconContext.Provider>
     </>
   );
-=======
-import React, { Component } from 'react'
-import Navbar from "./../_components/Navbar"
-export default class index extends Component {
-	render() {
-		return (
-			<div>
-				<Navbar />
-			</div>
-		)
-	}
->>>>>>> fd985c3fabef6381930c0cad1513c89e4ae44137
 }
 
 export default Navbar;
