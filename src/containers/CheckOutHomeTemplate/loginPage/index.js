@@ -55,7 +55,7 @@ export default class LoginHomePage extends Component {
                     className="font-bold text-blue-700 hover:bg-blue-200 hover:underline hover:p-5 p-2 rounded-full"
                     href="#"
                   >
-                    Forgot password?
+                    Forgot password?123123g
                   </a>
                 </div>
                 <button className="w-full text-center bg-blue-700 hover:bg-blue-900 rounded-full text-white py-3 font-medium">
