@@ -51,8 +51,11 @@ export default class LoginHomePage extends Component {
                 <span className="focus-input100" />
               </div>
               <div className="container-login100-form-btn m-t-17">
-                <button className="login100-form-btn">Đăng nhập</button>
+                <button className="login100-form-btn">
+                  <a href="/home">Đăng nhập</a>
+                </button>
               </div>
+
               <div className="w-full text-center p-t-55">
                 <span className="txt2">Bạn mới tham gia Netflix? </span>
                 <a href="#" className="txt2 bo1">
