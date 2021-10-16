@@ -7,7 +7,10 @@ export default class NavbarHome extends Component {
     return (
       <div>
         <div>
-          <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-nav">
+          <nav
+           
+            className="nav-display navbar navbar-expand-lg navbar-light fixed-top bg-nav"
+          >
             <div className=" container">
               <a className="navbar-brand " href="/home">
                 MouriM
@@ -24,7 +27,7 @@ export default class NavbarHome extends Component {
                 <span className="navbar-toggler-icon" />
               </button>
               <div
-                className=" collapse navbar-collapse bg-nav2"
+                className="collapse-display collapse navbar-collapse bg-nav2"
                 id="navbarSupportedContent"
               >
                 <ul className=" navbar-nav ml-auto ">

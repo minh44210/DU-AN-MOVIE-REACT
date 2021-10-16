@@ -4,73 +4,62 @@ import "./style.css";
 export default class LoginHomePage extends Component {
   render() {
     return (
-      <div>
-        <div>
-          <header>
-            <a
-              aria-label="Linkedin"
-              className="z-10 mt-9 absolute md:ml-12 ml-9"
-              href="/"
-            ></a>
-          </header>
-          <div className="h-screen bg-white relative flex flex-col space-y-10 justify-center items-center">
-            <div className="bg-white md:shadow-lg shadow-none rounded p-6 w-96">
-              <h1 className="text-3xl font-bold leading-normal">Sign in</h1>
-              <p className="text-sm leading-normal">
-                Stay updated on your professional world
-              </p>
-              <form className="space-y-5 mt-5">
-                <div className="mb-4 relative">
-                  <input
-                    id="email"
-                    className="w-full rounded px-3 border border-gray-500 pt-5 pb-2 focus:outline-none input active:outline-none"
-                    type="text"
-                    autofocus
-                  />
-                  <label
-                    htmlFor="email"
-                    className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text"
-                  >
-                    Email or Phone
-                  </label>
-                </div>
-                <div className="relative flex items-center border border-gray-500 focus:ring focus:border-blue-500 rounded">
-                  <input
-                    id="password"
-                    className="w-full rounded px-3 pt-5 outline-none pb-2 focus:outline-none active:outline-none input active:border-blue-500"
-                    type="password"
-                  />
-                  <label
-                    htmlFor="password"
-                    className="label absolute mb-0 -mt-2 pt-4 pl-3 leading-tighter text-gray-500 text-base mt-2 cursor-text"
-                  >
-                    Password
-                  </label>
-                  <a className="text-sm font-bold text-blue-700 hover:bg-blue-100 rounded-full px-2 py-1 mr-1 leading-normal cursor-pointer">
-                    show
-                  </a>
-                </div>
-                <div className="-m-2">
-                  <a
-                    className="font-bold text-blue-700 hover:bg-blue-200 hover:underline hover:p-5 p-2 rounded-full"
-                    href="#"
-                  >
-                    Forgot password?123123g
-                  </a>
-                </div>
-                <button className="w-full text-center bg-blue-700 hover:bg-blue-900 rounded-full text-white py-3 font-medium">
-                  Sign in
-                </button>
-              </form>
-            </div>
-            <p>
-              <a
-                className="text-blue-700 font-bold hover:bg-blue-200 hover:underline hover:p-5 p-2 rounded-full"
-                href="#"
-              >
-                Join now
+      <div className="signin--vertical">
+        <div className="container-login100">
+          <div className="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
+            <form className="login100-form validate-form flex-sb flex-w">
+              <span className="login100-form-title p-b-53">
+                Đăng nhập để được nhiều ưu đãi, mua vé và bảo mật thông tin!
+              </span>
+              <a href="#" className="btn-face m-b-20">
+                <img
+                  src="https://vshop.asia/images/socials/facebook.png"
+                  alt="FACEBOOK"
+                  style={{ margin: 10 }}
+                />
+                Đăng nhập bằng Facebook
               </a>
-            </p>
+              <a href="#" className="btn-google m-b-20">
+                <img
+                  src="https://colorlib.com/etc/lf/Login_v5/images/icons/icon-google.png"
+                  alt="GOOGLE"
+                  style={{ margin: 10 }}
+                />
+                Đăng nhập bằng Google
+              </a>
+              <div className="p-t-31 p-b-9">
+                <span className="txt1">Email hoặc số điện thoại</span>
+              </div>
+              <div
+                className="wrap-input100 validate-input"
+                data-validate="Username is required"
+              >
+                <input className="input100" type="text" name="username" />
+                <span className="focus-input100" />
+              </div>
+              <div className="p-t-13 p-b-9">
+                <span className="txt1">Mật Khẩu</span>
+                <a href="#" className="txt2 bo1 m-l-5">
+                  Bạn cần trợ giúp?
+                </a>
+              </div>
+              <div
+                className="wrap-input100 validate-input"
+                data-validate="Password is required"
+              >
+                <input className="input100" type="password" name="pass" />
+                <span className="focus-input100" />
+              </div>
+              <div className="container-login100-form-btn m-t-17">
+                <button className="login100-form-btn">Đăng nhập</button>
+              </div>
+              <div className="w-full text-center p-t-55">
+                <span className="txt2">Bạn mới tham gia Netflix? </span>
+                <a href="#" className="txt2 bo1">
+                  Đăng ký ngay.
+                </a>
+              </div>
+            </form>
           </div>
         </div>
       </div>

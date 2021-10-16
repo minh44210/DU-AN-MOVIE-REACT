@@ -32,12 +32,17 @@ export default class DatVeMoive extends React.Component {
           key={index}
         >
           <Tabs tabPosition={tabPosition}>
-            {heThongRap.lstCumRap?.slice(0, 5).map((cumRap, index) => {
+            {heThongRap.lstCumRap?.slice(0, 4).map((cumRap, index) => {
               return (
                 <TabPane
                   className="text-color"
                   tab={
-                    <div style={{ width: "300px", display: "flex" }}>
+                    <div
+                      style={{
+                        width: "300px",
+                        display: "flex",
+                      }}
+                    >
                       <img src={heThongRap.logo} width="50" height="50" />
                       <br />
                       <div

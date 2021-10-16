@@ -10,7 +10,12 @@
 .carousel-caption {
   bottom: 270px;
 }
-
+nav.nav-display {
+  background-color: #0f2133d3 !important;
+  height: auto;
+}
+.collapse-display {
+}
 .carousel-caption h5 {
   font-size: 45px;
   text-transform: uppercase;
@@ -70,7 +75,9 @@
 .navbar-nav {
   text-align: center;
 }
-
+span.navbar-toggler-icon {
+  margin-left: 0 !important;
+}
 .nav-link {
   padding: 0.2rem 1rem;
 }

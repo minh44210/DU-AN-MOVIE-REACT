@@ -1,5 +1,9 @@
 .renderListMoive {
-  padding-left: 50px;
+  padding-left: 60px;
+}
+.warp-listmovie {
+  width: auto;
+  background-color: #0f2133;
 }
 .lichChieu {
   color: #fff;
@@ -10,10 +14,11 @@ h3.lichChieu:hover {
   text-align: center;
   color: #fff;
 }
+
 @media screen and (max-width: 359px) {
   .renderListMoive {
-    padding: 0px;
-    /* margin-left: -90px; */
+    max-width: 100%;
+    padding-left: 90px;
   }
 }
 
@@ -25,9 +30,8 @@ h3.lichChieu:hover {
     /* margin: 35px; */
   }
   .renderListMoive {
-    width: 85%;
-    margin-right: 190px;
-  }
+    padding-left: 65px;
+  } /*
 }
 .renderListMoive {
   /* padding: 50px; */
@@ -37,7 +41,10 @@ h3.lichChieu:hover {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 16.666667%;
     flex: 0 0 16.666667%;
-    max-width: 85%;
+    max-width: 75%;
     height: auto;
+  }
+  .renderListMoive {
+    padding-left: 70px;
   }
 }
