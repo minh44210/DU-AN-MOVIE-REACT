@@ -1,25 +1,32 @@
 import React from "react";
 import { Route, Redirect } from "react-router-dom";
-// import Sidebar from "./_components/Sidebar";
-import DashBoardPage from "./../AdminTemplate/DashBoardPage";
+import Sidebar from "./_components/Sidebar";
 
-function test(props) {
-  const { exact, path, component } = props;
-  return (
-    <>
-      <DashBoardPage />
-
-      <Route exact={exact} path={path} component={component} />
-    </>
-  );
+function LayoutAdmin(props) {
+	return (
+		<>
+			< Sidebar />
+			{props.children}
+		</>
+	);
 }
-function AdminTemplate(props) {
-  const { exact, path, component } = props;
+function AdminTemplate({ Component, ...props }) {
+	return (
+		<Route
+			{...props}
+			render={(propsRoute) => {
+				if (localStorage.getItem("UserAdmin")) {
+					return (
+						<LayoutAdmin>
+							<Component {...propsRoute} />
+						</LayoutAdmin>
+					);
+				}
 
-  return (
-    <>
-      <Route exact={exact} path={path} component={component} />
-    </>
-  );
+				//redirect ve /auth
+				return <Redirect to="/auth" />;
+			}}
+		/>
+	);
 }
 export default AdminTemplate;
