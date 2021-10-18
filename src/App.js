@@ -6,7 +6,7 @@ import PageNotFound from "./containers/PageNotFound";
 import {
   renderRoutesHome,
   renderRoutesAdmin,
-  renderRoutesLogin,
+  renderRoutesLoginHome,
 } from "./routes";
 // import LoginHomePage from "./containers/CheckOutHomeTemplate/loginPage";
 // import RegisterPage from "./containers/CheckOutHomeTemplate/RegisterPage";
@@ -19,7 +19,7 @@ function App() {
         {/* ADMIN DASHBOARD */}
         {renderRoutesAdmin()}
         {/* LOGIN HOME */}
-        {renderRoutesLogin()}
+        {renderRoutesLoginHome()}
         {/* <LoginHomePage /> */}
         {/* Trang không tồn tại  */}
         <Route path="" component={PageNotFound} />

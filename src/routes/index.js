@@ -94,7 +94,7 @@ function renderRoutesHome() {
     );
   });
 }
-function renderRoutesLogin() {
+function renderRoutesLoginHome() {
   return routesLogin.map((route, index) => {
     return (
       <Checkout
@@ -118,4 +118,4 @@ function renderRoutesAdmin() {
     );
   });
 }
-export { renderRoutesHome, renderRoutesAdmin, renderRoutesLogin };
+export { renderRoutesHome, renderRoutesAdmin, renderRoutesLoginHome };

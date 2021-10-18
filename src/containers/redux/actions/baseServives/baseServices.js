@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { DOMAIN, TOKEN } from "../../util/config";
+import { DOMAIN, DOMAIN2, TOKEN } from "../../util/config";
 export class baseService {
   //put json về phía backend
   put = (url, model) => {
