@@ -17,96 +17,96 @@ import Checkout from "../containers/CheckOutHomeTemplate/index";
 // ADMIN
 import DashBoardPage from "../containers/AdminTemplate/DashBoardPage";
 import Films from "../containers/AdminTemplate/Films";
-import AuthPage from "../containers/AdminTemplate/AuthPage"
+import AuthPage from "../containers/AdminTemplate/AuthPage";
 import { Dashboard } from "@mui/icons-material";
 // ADMIN
 
 // HOME
 const routesHome = [
-	{
-		exact: true,
-		path: "/",
-		component: HomePage,
-	},
-	{
-		exact: false,
-		path: "/home",
-		component: HomePage,
-	},
+  {
+    exact: true,
+    path: "/",
+    component: HomePage,
+  },
+  {
+    exact: false,
+    path: "/home",
+    component: HomePage,
+  },
 
-	{
-		exact: false,
-		path: "/about",
-		component: AboutPage,
-	},
-	{
-		exact: false,
-		path: "/movie-list",
-		component: ListMoviePage,
-	},
-	{
-		exact: false,
-		path: "/datve",
-		component: DatVeMoive,
-	},
-	{
-		exact: false,
-		path: "/ungdung",
-		component: DetailBg,
-	},
+  {
+    exact: false,
+    path: "/about",
+    component: AboutPage,
+  },
+  {
+    exact: false,
+    path: "/movie-list",
+    component: ListMoviePage,
+  },
+  {
+    exact: false,
+    path: "/datve",
+    component: DatVeMoive,
+  },
+  {
+    exact: false,
+    path: "/ungdung",
+    component: DetailBg,
+  },
 
-	{
-		exact: false,
-		path: "/detail/:id",
-		component: DetailMoive,
-	},
+  {
+    exact: false,
+    path: "/detail/:id",
+    component: DetailMoive,
+  },
 ];
 
 // LOGIN
 const routesLogin = [
-	{
-		exact: false,
-		path: "/dangky",
-		component: RegisterPage,
-	},
-	{
-		exact: false,
-		path: "/Login",
-		component: Login,
-	},
+  {
+    exact: false,
+    path: "/dangky",
+    component: RegisterPage,
+  },
+  {
+    exact: false,
+    path: "/Login",
+    component: Login,
+  },
 ];
 
 // ADMIN
 const routesAdmin = [
-	{
-		exact: false,
-		path: "/auth",
-		component: AuthPage,
-	},
-	{
-		exact: false,
-		path: "/dashboard",
-		component: DashBoardPage,
-	}, {
-		exact: false,
-		path: "/dashboard/films",
-		component: Films,
-	},
+  {
+    exact: false,
+    path: "/auth",
+    component: AuthPage,
+  },
+  {
+    exact: false,
+    path: "/dashboard",
+    component: DashBoardPage,
+  },
+  {
+    exact: false,
+    path: "/dashboard/films",
+    component: Films,
+  },
 ];
 function renderRoutesHome() {
-	return routesHome.map((route, index) => {
-		return (
-			<HomeTemplate
-				key={index}
-				exact={route.exact}
-				path={route.path}
-				component={route.component}
-			/>
-		);
-	});
+  return routesHome.map((route, index) => {
+    return (
+      <HomeTemplate
+        key={index}
+        exact={route.exact}
+        path={route.path}
+        component={route.component}
+      />
+    );
+  });
 }
-<<<<<<< HEAD
-function renderRoutesLoginHome() {
+function renderRoutesLogin() {
   return routesLogin.map((route, index) => {
     return (
       <Checkout
@@ -117,30 +117,17 @@ function renderRoutesLoginHome() {
       />
     );
   });
-=======
-function renderRoutesLogin() {
-	return routesLogin.map((route, index) => {
-		return (
-			<Checkout
-				key={index}
-				exact={route.exact}
-				path={route.path}
-				component={route.component}
-			/>
-		);
-	});
->>>>>>> a445694aa891555bd8b34265ea6df67a2db07b6d
 }
 function renderRoutesAdmin() {
-	return routesAdmin.map((route, index) => {
-		return (
-			<AdminTemplate
-				key={index}
-				exact={route.exact}
-				path={route.path}
-				component={route.component}
-			/>
-		);
-	});
+  return routesAdmin.map((route, index) => {
+    return (
+      <AdminTemplate
+        key={index}
+        exact={route.exact}
+        path={route.path}
+        component={route.component}
+      />
+    );
+  });
 }
-export { renderRoutesHome, renderRoutesAdmin, renderRoutesLoginHome };
+export { renderRoutesHome, renderRoutesAdmin, renderRoutesLogin };
