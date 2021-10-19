@@ -7,6 +7,7 @@
 }
 .lichChieu {
   color: #fff;
+  margin-top: 50px;
   font-size: 30px;
 }
 h3.lichChieu:hover {
@@ -20,6 +21,11 @@ h3.lichChieu:hover {
     max-width: 100%;
     padding-left: 90px;
   }
+  .lichChieu {
+    color: #fff;
+    margin-top: 50px;
+    font-size: 30px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -28,6 +34,11 @@ h3.lichChieu:hover {
     width: 400px;
     height: auto;
     /* margin: 35px; */
+  }
+  .lichChieu {
+    color: #fff;
+    margin-top: 90px;
+    font-size: 30px;
   }
   .renderListMoive {
     padding-left: 65px;
@@ -43,6 +54,11 @@ h3.lichChieu:hover {
     flex: 0 0 16.666667%;
     max-width: 75%;
     height: auto;
+  }
+  .lichChieu {
+    color: #fff;
+    margin-top: 90px;
+    font-size: 30px;
   }
   .renderListMoive {
     padding-left: 70px;

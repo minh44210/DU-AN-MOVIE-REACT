@@ -6,12 +6,9 @@ export default class NavbarHome extends Component {
   render() {
     return (
       <div>
-        <div>
-          <nav
-           
-            className="nav-display navbar navbar-expand-lg navbar-light fixed-top bg-nav"
-          >
-            <div className=" container">
+        <div className="container">
+          <nav className="nav-display navbar navbar-expand-lg navbar-light fixed-top bg-nav ">
+            <div className=" container px-4">
               <a className="navbar-brand " href="/home">
                 MouriM
               </a>
@@ -77,15 +74,6 @@ export default class NavbarHome extends Component {
                       to="/login"
                     >
                       Login
-                    </NavLink>
-                  </li>
-                  <li className="nav-item">
-                    <NavLink
-                      activeClassName="btn1"
-                      className="nav-link"
-                      to="/dangky"
-                    >
-                      Đăng ký
                     </NavLink>
                   </li>
                 </ul>

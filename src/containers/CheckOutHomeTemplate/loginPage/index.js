@@ -19,7 +19,7 @@ function LoginHomePage(props) {
 
   const handlieLogin = (event) => {
     event.preventDefault();
-    dispatch(actUserLoginHomeaApi(state));
+    dispatch(actUserLoginHomeaApi(state, props.history));
   };
 
   const renderNoti = () => {
@@ -31,6 +31,7 @@ function LoginHomePage(props) {
       )
     );
   };
+
   return (
     <form onSubmit={handlieLogin} className="signin--vertical">
       <div className="container-login100">
@@ -84,13 +85,13 @@ function LoginHomePage(props) {
             </div>
             <div className="container-login100-form-btn m-t-17">
               <button type="submit" className="login100-form-btn">
-                <a href="#">Đăng nhập</a>
+                Đăng nhập
               </button>
             </div>
 
             <div className="w-full text-center p-t-55">
               <span className="txt2">Bạn mới tham gia Netflix? </span>
-              <a href="#" className="txt2 bo1">
+              <a href="/dangky" className="txt2 bo1">
                 Đăng ký ngay.
               </a>
             </div>

@@ -289,6 +289,7 @@ input {
   transition: all 0.4s;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 .p-t-55 {
   padding-top: 55px;

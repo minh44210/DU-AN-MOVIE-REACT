@@ -1,13 +1,15 @@
 import * as ActionType from "./constants";
-import axios from "axios";
 import api from "../../../redux/util/config";
+import { Redirect } from "react-router";
 
-export const actUserLoginHomeaApi = (user) => {
+export const actUserLoginHomeaApi = (user, history) => {
   return (dispatch) => {
     dispatch(actUserLoginRequest());
     api
       .post("QuanLyNguoiDung/DangNhap", user)
       .then((result) => {
+        // Redirect
+        history.replace("/home");
         dispatch(actUserLoginSucces(result.data.content));
       })
       .catch((error) => {
