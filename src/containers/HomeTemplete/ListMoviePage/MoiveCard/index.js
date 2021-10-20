@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Star } from "react-ionicons";
+
 import "./style.css";
 
 export default class Moive extends Component {
@@ -47,7 +49,7 @@ export default class Moive extends Component {
                   <div className="info-section">
                     <label>Đánh Giá</label>
                     <span> {moive.danhGia} / 10</span>{" "}
-                    <i className="fa fa-star yellow-color " />
+                    <Star color={"#ECC331"} height="10px" width="10px" />
                   </div>
                 </div>
               </div>

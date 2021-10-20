@@ -9,9 +9,14 @@ export const actUserLoginHomeaApi = (user, history) => {
       .post("QuanLyNguoiDung/DangNhap", user)
       .then((result) => {
         // Redirect
-        history.replace("/home");
+        if (result.data.content.maLoaiNguoiDung === "KhachHang") {
+          return history.replace("/home");
+        } else {
+          return history.replace("/dashboard");
+        }
         dispatch(actUserLoginSucces(result.data.content));
       })
+
       .catch((error) => {
         dispatch(actUserLoginFailed(error));
       });
