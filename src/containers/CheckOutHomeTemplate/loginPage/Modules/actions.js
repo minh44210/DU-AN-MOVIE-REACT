@@ -10,11 +10,15 @@ export const actUserLoginHomeaApi = (user, history) => {
       .then((result) => {
         // Redirect
         if (result.data.content.maLoaiNguoiDung === "KhachHang") {
+          dispatch(actUserLoginSucces(result.data.content));
+          localStorage.setItem(
+            "UserAdmin",
+            JSON.stringify(result.data.content)
+          );
           return history.replace("/home");
         } else {
           return history.replace("/dashboard");
         }
-        dispatch(actUserLoginSucces(result.data.content));
       })
 
       .catch((error) => {

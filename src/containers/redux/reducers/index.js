@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
 import UserLoginHomeReducer from "../../CheckOutHomeTemplate/loginPage/Modules/reducer";
+import UserRegHomeReducer from "../../CheckOutHomeTemplate/RegisterPage/Modules/reducer";
 import detailMoiveReducer from "../../HomeTemplete/DetailMoive/Modules/reducer";
 import listMoiveReducer from "../../HomeTemplete/ListMoviePage/Modules/reducer";
 import { QuanlyRapReducer } from "../actions/reducers/QuanLyRapReducer";
@@ -11,5 +12,6 @@ const rootReducer = combineReducers({
   QuanlyRapReducer,
   authReducer,
   UserLoginHomeReducer,
+  UserRegHomeReducer,
 });
 export default rootReducer;

@@ -60,9 +60,9 @@ export default class NavbarHome extends Component {
                     <NavLink
                       activeClassName="btn1"
                       className="nav-link"
-                      to="/datve"
+                      to="/chitietphongve/id"
                     >
-                      Đặt Vé
+                      Đặt Vé Online
                     </NavLink>
                   </li>
                 </ul>

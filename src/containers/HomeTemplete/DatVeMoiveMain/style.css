@@ -1,0 +1,1059 @@
+/*! CSS Used from: Embedded */
+.ng-hide:not(.ng-hide-animate) {
+  display: none !important;
+}
+/*! CSS Used from: https://tix.vn/app/assets/libs/bootstrap-3.3.7/css/bootstrap.min.css */
+
+@media print {
+  *,
+  :after,
+  :before {
+    color: #000 !important;
+    text-shadow: none !important;
+    background: 0 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  h3 {
+    page-break-after: avoid;
+  }
+  .label {
+    border: 1px solid #000;
+  }
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+button,
+input {
+  font-size: inherit;
+  line-height: inherit;
+}
+a {
+  color: #337ab7;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+h3 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 24px;
+}
+p {
+  margin: 0 0 10px;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.title span {
+  margin-left: 5px !important;
+}
+.col-sm-10,
+.col-sm-5,
+.col-sm-7,
+.col-xs-10,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-xs-10,
+.col-xs-5,
+.col-xs-6,
+.col-xs-7 {
+  float: left;
+}
+.col-xs-10 {
+  width: 83.33333333%;
+}
+.col-xs-7 {
+  width: 58.33333333%;
+}
+.col-xs-6 {
+  width: 50%;
+}
+.col-xs-5 {
+  width: 41.66666667%;
+}
+@media (min-width: 768px) {
+  .col-sm-10,
+  .col-sm-5,
+  .col-sm-7 {
+    float: left;
+  }
+  .col-sm-10 {
+    width: 83.33333333%;
+  }
+  .col-sm-7 {
+    width: 58.33333333%;
+  }
+  .col-sm-5 {
+    width: 41.66666667%;
+  }
+}
+table {
+  background-color: transparent;
+}
+label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+input[type="radio"] {
+  margin: 4px 0 0;
+  margin-top: 1px\9;
+  line-height: normal;
+}
+input[type="radio"]:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label:empty {
+  display: none;
+}
+.row:after,
+.row:before {
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+}
+
+.float-left {
+  float: left !important;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:focus {
+  outline: 0;
+}
+.clearBoth {
+  clear: both;
+}
+.customScroll {
+  overflow-y: scroll;
+}
+.customScroll::-webkit-scrollbar-track {
+  border-radius: 7px;
+}
+.customScroll::-webkit-scrollbar {
+  width: 4px;
+  background-color: #e8e3e3;
+}
+.customScroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.btnConfirm {
+  font-size: 14px;
+  color: #949494;
+  font-family: "SF Regular";
+  border: 1px solid #949494;
+  border-radius: 4px;
+  text-align: center;
+  background: 0 0;
+  padding: 7px 25px;
+  transition: all 0.2s;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.no-font-weight {
+  font-weight: unset;
+}
+.payoo-number {
+  margin: auto;
+  position: relative;
+  margin-top: 20px;
+  max-width: 532px;
+  padding: 15px 20px;
+  text-align: center;
+  background-color: #1eb947;
+  color: #fff;
+}
+.payoo-number .payoo-code {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  font-size: 13px;
+}
+.continuebuttonmobile {
+  z-index: 3;
+  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #fefdfb;
+  box-shadow: 0 -1px 0 0 #dadada, 0 1px 0 0 #dadada;
+}
+#zalopaycheckout {
+  display: none;
+  border-radius: 4px;
+  text-align: center;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
+  width: 600px;
+  padding: 50px 20px;
+  transform: translate(-50%, -50%);
+}
+#zalopaycheckout .qr-header {
+  display: inline-flex;
+  width: 81%;
+}
+#zalopaycheckout .qr-header .comfirm {
+  font-size: 24px;
+  font-family: "SF Medium";
+}
+#zalopaycheckout .qr-header .logozalopay {
+  margin-left: 2%;
+  width: 100px;
+  height: 30px;
+}
+#zalopaycheckout .qr-wrap-code {
+  width: 200px;
+  height: 200px;
+  margin: 15px auto;
+  border: 1px solid #f2f2f2;
+}
+#zalopaycheckout .qr-wrap-code .codeqr {
+  border: 1px solid #dadada;
+  height: 200px;
+  width: 200px;
+}
+#zalopaycheckout .qr-noti {
+  font-size: 18px;
+}
+#zalopaycheckout .qr-noti .totalticket {
+  color: #008fe5 !important;
+}
+#zalopaycheckout .qr-noti .totalcost {
+  color: #04be04 !important;
+}
+#zalopaycheckout .qr-countdown {
+  font-size: 18px;
+}
+#zalopaycheckout .qr-cancel {
+  cursor: pointer;
+  position: absolute;
+  top: -1%;
+  right: -1%;
+}
+#zalopaycheckout .qr-cancel .logoclose {
+  width: 50px;
+  height: 50px;
+}
+#payoocheckout {
+  height: 75%;
+  display: none;
+  border-radius: 4px;
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 6;
+  width: 50%;
+  padding: 20px 20px;
+  padding-right: 0;
+  transform: translate(-50%, -50%);
+}
+#payoocheckout .custom_scrollbar::-webkit-scrollbar {
+  width: 4px;
+  background-color: #e8e3e3;
+}
+#payoocheckout .custom_scrollbar::-webkit-scrollbar-track {
+  border-radius: 7px;
+}
+#payoocheckout .custom_scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+#payoocheckout .checkout-success {
+  margin: 2%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+#payoocheckout .infotop {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+#payoocheckout .poster-info {
+  float: left;
+  width: 30%;
+  border-radius: 4px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#payoocheckout .filmname {
+  font-size: 24px;
+  font-family: "SF Medium";
+}
+#payoocheckout h3 {
+  font-size: 20px;
+}
+#payoocheckout .titlecontent {
+  font-family: "SF Medium";
+}
+#payoocheckout .block-info {
+  float: left;
+  margin-left: 5%;
+  width: 65%;
+}
+#payoocheckout .block-info .ageType {
+  position: relative;
+  margin-right: 7px;
+  padding: 3px 5px 0 5px;
+  font-size: 16px;
+  background-color: #fb4226;
+  color: #fff;
+  border-radius: 4px;
+  text-align: center;
+  vertical-align: 2px;
+  min-width: 33px;
+}
+#payoocheckout .block-info .version {
+  color: #e9e9e9;
+  margin-right: 2px;
+  padding: 3px 5px 0 5px;
+  font-size: 16px;
+  background-color: #000;
+  border-radius: 4px;
+  text-align: center;
+}
+#payoocheckout .block-info .digital {
+  margin-right: 7px !important;
+}
+#payoocheckout .rowinfo {
+  line-height: 30px;
+}
+#payoocheckout .payoo-cancel {
+  cursor: pointer;
+  position: absolute;
+  top: -1%;
+  right: -1%;
+}
+#payoocheckout .payoo-cancel .logoclose {
+  width: 50px;
+  height: 50px;
+}
+#confirmcheckout {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px 20px 20px 20px;
+  z-index: 6;
+}
+#confirmcheckout .contentfull {
+  width: 400px;
+  text-align: center;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  background: #fff;
+  border: #9b9b9b solid 1px;
+}
+#confirmcheckout .contentfull .contentHeader {
+  width: 80px;
+  margin: 30px calc(50% - 20px) 0;
+}
+#confirmcheckout .contentfull .title {
+  font-size: 18px;
+  margin: 20px;
+}
+#confirmcheckout .contentfull .row {
+  margin: 0 15px;
+  padding: 15px 0;
+  text-align: right;
+  border-top: 1.2px solid rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+}
+#confirmcheckout .contentfull .row .containBtn {
+  display: inline-block;
+}
+#confirmcheckout .contentfull .row .containBtn .btnNo {
+  margin: 0;
+  border-radius: 20px;
+  border-color: #9b9b9b;
+  color: #333;
+}
+
+#confirmcheckout .contentfull .row .containBtn .btnYes {
+  margin: 0;
+  border-radius: 20px;
+  border-color: #008fe5;
+  color: #008fe5;
+}
+
+#rightcheckout {
+  position: fixed;
+  right: -450px;
+  top: 0;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  width: 440px;
+  height: 100%;
+}
+#rightcheckout .phoneerror {
+  margin-top: 5px;
+}
+#rightcheckout .contentfullright {
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 100px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#rightcheckout .continuebuttonmobile {
+  left: 0;
+}
+#rightcheckout .continuebuttonmobile .totalcost {
+  text-align: center;
+  height: 50px;
+  font-size: 28px;
+  color: #44c020 !important;
+}
+#rightcheckout .continuebuttonmobile .continuebutton {
+  height: 50px;
+  padding-top: 3%;
+  cursor: pointer;
+  font-size: 19px;
+  text-align: center;
+  color: #e9e9e9 !important;
+  background: #44c020;
+  position: relative;
+}
+#rightcheckout .continuebuttonmobile .continuebutton.disabled {
+  background-image: none;
+  background-color: #afafaf;
+  pointer-events: none;
+}
+#rightcheckout .continuebuttonmobile .seatchosen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  text-align: center;
+  width: 85%;
+  font-size: 15px;
+  color: #44c020 !important;
+}
+#rightcheckout .total {
+  position: relative;
+  border-bottom: 1px dashed #e9e9e9;
+  height: 80px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 36px;
+  font-family: "SF Medium";
+  color: #44c020 !important;
+}
+#rightcheckout .total .cash {
+  width: 300px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+#rightcheckout .filmname {
+  border-bottom: 1px dashed #e9e9e9;
+  padding-bottom: 12.5px;
+  font-family: "SF Medium";
+  font-size: 16px;
+}
+#rightcheckout .filmname .ageType {
+  background-color: #fb4226;
+  color: #fff;
+  border-radius: 4px;
+  padding: 0 5px;
+  float: left;
+  margin-right: 5px;
+  font-size: 12px;
+  vertical-align: 2px;
+  min-width: 33px;
+  text-align: center;
+}
+#rightcheckout .filmname .contentcinema {
+  margin-top: 5px;
+  font-family: "SF Regular";
+  font-size: 14px;
+}
+#rightcheckout .chair {
+  border-bottom: 1px dashed #e9e9e9;
+  padding-bottom: 12.5px;
+  padding-top: 12.5px;
+  margin-bottom: 12.5px;
+}
+#rightcheckout .chair .info {
+  padding-left: 0;
+}
+#rightcheckout .chair .info .title {
+  color: #fb4226;
+  font-size: 14px;
+}
+#rightcheckout .chair .totalchair {
+  font-family: "SF Medium";
+  text-align: right;
+  color: #44c020 !important;
+  font-size: 16px;
+}
+#rightcheckout .infouser {
+  border-bottom: 1px dashed #e9e9e9;
+  padding-bottom: 12.5px;
+  margin-bottom: 12.5px;
+  position: relative;
+}
+#rightcheckout .infouser label {
+  color: #9b9b9b;
+  font-size: 16px;
+  position: absolute;
+  transition: 0.3s;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+}
+#rightcheckout .infouser input.content {
+  width: calc(100% - 16px);
+  padding-right: 5px;
+  padding-left: 0;
+}
+#rightcheckout .infouser input.content:focus,
+#rightcheckout .infouser input.content:valid {
+  margin-top: 5px;
+  padding-top: 12.5px;
+  outline: 0;
+}
+#rightcheckout .infouser input.content:focus ~ label,
+#rightcheckout .infouser input.content:valid ~ label {
+  font-size: 12px;
+  font-weight: 300;
+  top: 2px;
+}
+#rightcheckout .infouser input.content:focus ~ label {
+  color: #4a90e2;
+}
+#rightcheckout .infouser .error {
+  font-size: 12px;
+  color: #fb4226 !important;
+  cursor: default;
+}
+#rightcheckout .methodpay {
+  margin-bottom: 40%;
+  font-size: 16px;
+  cursor: pointer;
+}
+#rightcheckout .methodpay .titlemethodpay {
+  margin-bottom: 5px;
+}
+#rightcheckout .methodpay .titlemethodpay .errormethodpay {
+  display: none;
+  font-size: 12px;
+  color: #fb4226 !important;
+}
+#rightcheckout .methodpay .chosenmethod {
+  margin-bottom: 5px;
+  position: relative;
+  clear: both;
+}
+#rightcheckout .methodpay .chosenmethod input[type="radio"] {
+  background-color: #fff;
+  position: absolute;
+  top: 15%;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #4a90e2;
+  border-radius: 50%;
+  outline: 0;
+}
+
+#rightcheckout .methodpay .chosenmethod input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: 25% auto;
+  border-radius: 50%;
+}
+#rightcheckout .methodpay .chosenmethod input[type="radio"]:checked:before {
+  background: #4a90e2 !important;
+}
+#rightcheckout .methodpay .chosenmethod .icon {
+  border-radius: 5px;
+  margin-left: 35px;
+  margin-right: 15px;
+  width: auto;
+  pointer-events: none;
+  max-width: 40px;
+}
+#rightcheckout .methodpay .chosenmethod .arrow {
+  position: absolute;
+  right: 1%;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+  width: 7px;
+}
+#rightcheckout .methodpay .chosenmethod .titlechosen {
+  pointer-events: none;
+  position: absolute;
+  width: calc(100% - 95px);
+  left: 95px;
+  top: 50%;
+  margin-bottom: 0;
+  transform: translateY(-50%);
+}
+#rightcheckout .methodpay .chosenmethod .wrap-methodnote {
+  width: 100%;
+}
+#rightcheckout .methodpay .chosenmethod .methodnote {
+  font-size: 11px;
+  color: red;
+  width: fit-content;
+}
+#rightcheckout .methodpay .chosenmethod .paymentParent {
+  pointer-events: none;
+  position: relative;
+}
+#rightcheckout .methodpay .chosenmethod .listChildren {
+  margin-left: 40px;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+  position: static;
+}
+#rightcheckout .methodpay .chosenmethod .bank {
+  float: left;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  width: 60px;
+  height: 40px;
+  background-color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 50px auto;
+  margin: 10px 10px 0 0;
+}
+
+#rightcheckout .notice {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 4%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  margin-right: 4px;
+  background: #fff;
+  text-align: center;
+  z-index: 2;
+}
+#rightcheckout .notice .icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+#rightcheckout .notice .title {
+  font-size: 14px;
+  color: #4a4a4a;
+}
+#rightcheckout .errorbook {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none;
+  color: #fb4226;
+  font-size: 16px;
+  text-align: center;
+}
+#rightcheckout .buyticket {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 15px;
+  height: 60px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+  color: #e9e9e9 !important;
+  background-image: linear-gradient(223deg, #b4ec51 0, #429321 100%);
+}
+#rightcheckout .voucher-promo {
+  border-bottom: 1px dashed #e9e9e9;
+  padding-bottom: 12.5px;
+  margin-bottom: 12.5px;
+  position: relative;
+}
+#rightcheckout .voucher-promo label {
+  color: #9b9b9b;
+  position: absolute;
+  transition: 0.3s;
+  left: 0;
+  z-index: 1;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  top: 2px;
+}
+#rightcheckout .voucher-promo input.content {
+  width: 75%;
+  padding-right: 5px;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+#rightcheckout .voucher-promo input.content:focus,
+#rightcheckout .voucher-promo input.content:valid {
+  margin-top: 5px;
+  padding-top: 12.5px;
+  outline: 0;
+}
+#rightcheckout .voucher-promo input.content:focus ~ label {
+  color: #4a90e2;
+}
+#rightcheckout .voucher-promo input.content::placeholder {
+  text-transform: none;
+  color: #333;
+}
+#rightcheckout .voucher-promo .remove {
+  width: auto;
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+#rightcheckout .voucher-promo .remove.btn-apply-voucher {
+  font-size: 13px;
+  font-weight: 300;
+  color: #fff;
+  background-color: #4cb050;
+  border-radius: 6px;
+  padding: 5px 7px;
+  cursor: pointer;
+  top: 5px;
+}
+#rightcheckout .voucher-promo .remove.disabled {
+  background-color: #afafaf;
+  pointer-events: none;
+}
+@media (min-width: 1500px) {
+  #rightcheckout .contentfullright {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  #rightcheckout .notice {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1500px) {
+  #rightcheckout {
+    position: fixed;
+    right: -26%;
+    width: 26% !important;
+  }
+  #rightcheckout .total {
+    font-size: 34px;
+  }
+  #rightcheckout .filmname {
+    font-size: 14px;
+  }
+  #rightcheckout .filmname .ageType {
+    font-size: 14px;
+  }
+  #rightcheckout .chair .info .title {
+    font-size: 12px;
+  }
+  #rightcheckout .chair .totalchair {
+    font-size: 14px;
+  }
+  #rightcheckout .infouser .content {
+    font-size: 14px;
+  }
+  #rightcheckout .infouser .error {
+    font-size: 10px;
+  }
+  #rightcheckout .methodpay {
+    font-size: 14px;
+  }
+  #rightcheckout .methodpay .titlemethodpay .errormethodpay {
+    font-size: 10px;
+  }
+  #rightcheckout .notice .title {
+    font-size: 12px;
+  }
+  #rightcheckout .errorbook {
+    font-size: 14px;
+  }
+  #rightcheckout .buyticket {
+    font-size: 22px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #rightcheckout {
+    right: -35%;
+    width: 28% !important;
+  }
+  #rightcheckout .methodpay {
+    margin-bottom: 30% !important;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  #payoocheckout {
+    margin-top: 60px;
+    padding-top: 0 !important;
+    position: initial !important;
+    width: auto !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding-right: inherit !important;
+    overflow-y: visible;
+    transform: initial !important;
+  }
+  #payoocheckout .checkout-success {
+    width: calc(100% - 20px);
+    padding-top: 5%;
+    margin: 0 !important;
+    overflow: visible !important;
+    height: fit-content;
+  }
+  #payoocheckout .filmname .ageType {
+    margin-top: -1px !important;
+    font-size: 16px;
+  }
+  #payoocheckout .poster-info {
+    display: none;
+  }
+  #payoocheckout .contentfull {
+    max-width: 170px;
+    word-wrap: break-word;
+  }
+  #payoocheckout .block-info {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0;
+  }
+  #payoocheckout .infobook {
+    padding-left: 0;
+  }
+  #payoocheckout .payoo-cancel {
+    display: none !important;
+  }
+  #rightcheckout {
+    margin-top: 59px;
+    padding-top: 0 !important;
+    position: static !important;
+    width: 100% !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-shadow: none !important;
+  }
+  #rightcheckout .contentfullright {
+    padding-top: 0 !important;
+    overflow-y: visible !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+  }
+  #rightcheckout .filmname .ageType {
+    margin-top: 2px;
+  }
+  #rightcheckout .methodpay {
+    margin-bottom: 30% !important;
+  }
+  #rightcheckout .notice {
+    position: static !important;
+    margin-bottom: 65px !important;
+  }
+  #rightcheckout .notice .title {
+    font-size: 14px !important;
+  }
+  #rightcheckout .buyticket {
+    display: none !important;
+  }
+  #rightcheckout .continuebuttonmobile {
+    display: block !important;
+  }
+  #rightcheckout .continuebuttonmobile .totalcost {
+    height: 70px !important;
+    padding-top: 2%;
+    text-align: center;
+  }
+  #rightcheckout .continuebuttonmobile .continuebutton {
+    height: 70px !important;
+    padding-top: 3% !important;
+  }
+}
+@media (max-width: 480px) {
+  #payoocheckout {
+    margin-top: 60px;
+    padding-top: 0 !important;
+    position: initial !important;
+    width: auto !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: initial !important;
+  }
+  #payoocheckout .checkout-success {
+    padding-top: 5%;
+    margin: 1% !important;
+    overflow: visible !important;
+    height: fit-content;
+  }
+  #payoocheckout .filmname .ageType {
+    margin-top: -1px !important;
+    font-size: 16px;
+  }
+  #payoocheckout .poster-info {
+    display: none;
+  }
+  #payoocheckout .contentfull {
+    max-width: 210px;
+    word-wrap: break-word;
+  }
+  #payoocheckout .block-info {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0;
+  }
+  #payoocheckout .infobook {
+    padding-left: 0;
+  }
+  #payoocheckout .payoo-cancel {
+    display: none;
+  }
+  .payoo-number {
+    margin-right: 20px;
+  }
+  #rightcheckout {
+    margin-top: 59px;
+    padding-top: 0 !important;
+    position: static !important;
+    width: auto !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    box-shadow: none !important;
+    height: auto !important;
+  }
+  #rightcheckout .contentfullright {
+    overflow-y: visible !important;
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: auto !important;
+    padding-bottom: 5px;
+  }
+  #rightcheckout .methodpay {
+    margin-bottom: 50px !important;
+  }
+  #rightcheckout .methodpay .titlechosen {
+    font-size: 14px !important;
+  }
+  #rightcheckout .notice {
+    position: static !important;
+    padding: 0;
+    margin-bottom: 65px !important;
+  }
+  #rightcheckout .notice .title {
+    font-size: 12px !important;
+  }
+  #rightcheckout .buyticket {
+    display: none !important;
+  }
+  #rightcheckout .continuebuttonmobile {
+    display: block !important;
+  }
+}
+@media (max-width: 380px) {
+  #payoocheckout .contentfull {
+    max-width: 170px;
+  }
+}
+@media (max-width: 360px) {
+  #rightcheckout .methodpay .titlechosen {
+    font-size: 13px !important;
+  }
+}
+@media (max-width: 320px) {
+  #payoocheckout .contentfull {
+    max-width: 150px;
+  }
+}

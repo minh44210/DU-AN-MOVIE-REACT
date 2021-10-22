@@ -5,7 +5,6 @@ import HomePage from "../containers/HomeTemplete/HomePage";
 import ListMoviePage from "../containers/HomeTemplete/ListMoviePage";
 import DetailMoive from "../containers/HomeTemplete/DetailMoive";
 import DetailBg from "../containers/HomeTemplete/_component/DetailBg";
-import DatVeMoive from "../containers/HomeTemplete/DatVeMoive";
 import HomeTemplate from "../containers/HomeTemplete";
 import AdminTemplate from "../containers/AdminTemplate";
 // / HOME
@@ -19,6 +18,7 @@ import DashBoardPage from "../containers/AdminTemplate/DashBoardPage";
 import Films from "../containers/AdminTemplate/Films";
 import AuthPage from "../containers/AdminTemplate/AuthPage";
 import { Dashboard } from "@mui/icons-material";
+import DatVeMoiveMain from "../containers/HomeTemplete/DatVeMoiveMain";
 // ADMIN
 
 // HOME
@@ -44,11 +44,7 @@ const routesHome = [
     path: "/movie-list",
     component: ListMoviePage,
   },
-  {
-    exact: false,
-    path: "/datve",
-    component: DatVeMoive,
-  },
+
   {
     exact: false,
     path: "/ungdung",
@@ -73,6 +69,11 @@ const routesLogin = [
     exact: false,
     path: "/Login",
     component: Login,
+  },
+  {
+    exact: false,
+    path: "/chitietphongve/:id",
+    component: DatVeMoiveMain,
   },
 ];
 

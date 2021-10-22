@@ -1,7 +1,12 @@
+import values from "postcss-modules-values";
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { actUserRegHomeaApi } from "./Modules/actions";
 import "./style.css";
 
 export default function RegisterPage() {
+  const dispatch = useDispatch();
+
   const [state, setState] = useState({
     taiKhoan: "string",
     matKhau: "string",
@@ -10,11 +15,21 @@ export default function RegisterPage() {
     hoTen: "string",
   });
 
-  const handleOnchange = (e) => {
-    const { name, value } = e.target;
+  const handleOnchange = (event) => {
+    const { name, value } = event.target;
+    setState({
+      ...state,
+      [name]: value,
+    });
   };
+
+  const handleReg = (event) => {
+    event.preventDefault();
+    dispatch(actUserRegHomeaApi(state));
+  };
+
   return (
-    <form className="signin--vertical">
+    <form onSubmit={handleReg} className="signin--vertical">
       <div className="container-login100">
         <div className="wrap-login100 p-l-110 p-r-110 p-t-62 p-b-33">
           <div className="login100-form validate-form flex-sb flex-w">
@@ -41,7 +56,12 @@ export default function RegisterPage() {
               <span className="txt1">Tài Khoản</span>
             </div>
             <div className="wrap-input100 validate-input">
-              <input className="input100" type="text" name="taiKhoan" />
+              <input
+                className="input100"
+                type="text"
+                name="taiKhoan"
+                onChange={handleOnchange}
+              />
               <span className="focus-input100" />
             </div>
             {/*  */}
@@ -49,7 +69,12 @@ export default function RegisterPage() {
               <span className="txt1">Họ Tên</span>
             </div>
             <div className="wrap-input100 validate-input">
-              <input className="input100" type="text" name="hoTen" />
+              <input
+                className="input100"
+                type="text"
+                name="hoTen"
+                onChange={handleOnchange}
+              />
               <span className="focus-input100" />
             </div>
             {/*  */}
@@ -57,7 +82,12 @@ export default function RegisterPage() {
               <span className="txt1">Số điện thoại</span>
             </div>
             <div className="wrap-input100 validate-input">
-              <input className="input100" type="text" name="soDt" />
+              <input
+                className="input100"
+                type="text"
+                name="soDt"
+                onChange={handleOnchange}
+              />
               <span className="focus-input100" />
             </div>
             {/*  */}
@@ -65,7 +95,12 @@ export default function RegisterPage() {
               <span className="txt1">Mật Khẩu</span>
             </div>
             <div className="wrap-input100 validate-input">
-              <input className="input100" type="password" name="matKhau" />
+              <input
+                className="input100"
+                type="password"
+                name="matKhau"
+                onChange={handleOnchange}
+              />
               <span className="focus-input100" />
             </div>
 
@@ -75,6 +110,7 @@ export default function RegisterPage() {
                   style={{ textDecoration: "none" }}
                   href="/login"
                   className="txt2 bo1"
+                  type="submit"
                 >
                   Đăng ký
                 </a>

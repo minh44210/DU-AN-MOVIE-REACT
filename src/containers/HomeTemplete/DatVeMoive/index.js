@@ -102,7 +102,7 @@ export default class DatVeMoive extends React.Component {
                                       <span className="text-lichchieu">
                                         <NavLink
                                           style={{ color: "1890ff" }}
-                                          to="/"
+                                          to={`/chitietphongve/${lichchieu.maLichChieu}`}
                                           key={index}
                                         >
                                           {moment(

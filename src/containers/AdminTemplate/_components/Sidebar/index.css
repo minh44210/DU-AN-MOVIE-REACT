@@ -67,9 +67,9 @@
   align-items: center;
 }
 
-span {
+/* span {
   margin-left: 16px;
-}
+} */
 .btn-logout {
   padding: 10px;
   width: 50%;
