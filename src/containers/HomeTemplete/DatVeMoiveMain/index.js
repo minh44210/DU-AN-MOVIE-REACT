@@ -1,24 +1,53 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-
 import "./style.css";
 import "./seatCheckOut.css";
+import { actMoiveMainApi } from "./Modules/actions";
 
 export default function DatVeMoiveMain(props) {
+  const ThongTinMovie = useSelector((state) => state.MoiveMainReducer);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const action = actMoiveMainApi(props.match.params.id);
+
+    dispatch(action);
+  }, []);
+  console.log(ThongTinMovie, "123");
+  const { data } = ThongTinMovie;
+
+  const renderSeat = () => {
+    return data?.danhSachGhe?.map((ghe, index) => {
+      let classGheVip = ghe.loaiGhe === "Vip" ? "gheVip" : "";
+      let classGheDaDat = ghe.daDat === true ? "gheDaDat" : "";
+
+      return (
+        <button
+          onClick={() => {
+            dispatch({
+              type: "DAT_VE",
+              gheDuocChon: ghe,
+            });
+          }}
+          disabled={ghe.daDat}
+          className={`ghe ${classGheVip} ${classGheDaDat}`}
+          key={index}
+        >
+          {ghe.stt}
+        </button>
+      );
+    });
+  };
   return (
     <div className="">
       <div
         id="rightcheckout"
-        ng-controller="CheckoutRightController"
         src="'app/checkout/right/right.html'"
-        ng-if="((isMobile && step==3) || (!isMobile && step < 4)) && isLoadConfig"
         style={{ right: 0 }}
         className="ng-scope"
       >
-        <div
-          ng-class="{'contentfullright customScroll': true, 'lotte': pCinemaId==1}"
-          className="ng-scope contentfullright customScroll"
-        >
+        <div className="ng-scope contentfullright customScroll">
           <div className="row total" style={{}}>
             <p className="cash ng-binding" id="totalcost">
               0 đ
@@ -27,81 +56,58 @@ export default function DatVeMoiveMain(props) {
           {/* ngIf: pCinemaId!=1 */}
           <div className="media">
             <div className="media-body">
-              <h5 className="mt-0"> Lật Mặt: 48h</h5>
-              <p>BHD Star - Vincom 3/2</p>
-              <p>Thứ hai 25/04/2021 - 12:05 - RẠP 5</p>
+              <h5 className="mt-0"> {data?.thongTinPhim?.tenPhim}</h5>
+              <p>{data?.thongTinPhim?.tenCumRap}</p>
+              <p>{data?.thongTinPhim?.diaChi}</p>
+              <p>
+                {data?.thongTinPhim?.ngayChieu} - {data?.thongTinPhim?.gioChieu}
+                - {data?.thongTinPhim?.tenRap}
+              </p>
             </div>
           </div>
 
-          {/* end ngIf: pCinemaId!=1 */}
-          {/* ngIf: pCinemaId!=1 && isAllowedStudentPrice && listseatchosencode.length > 0 */}
-          {/* ngIf: pCinemaId!=1 && !isAllowedStudentPrice */}
-          <div
-            className="chair row ng-scope"
-            ng-if="pCinemaId!=1 && !isAllowedStudentPrice"
-            style={{}}
-          >
+          <div className="chair row ng-scope" style={{}}>
             <div className="info col-sm-7 col-xs-7">
-              {/* ngIf: isMobile */}
-              {/* ngIf: !isMobile */}
-              <span
-                ng-if="!isMobile"
-                style={{ color: "#fb4226" }}
-                className="ng-scope"
-              >
+              <span style={{ color: "#fb4226" }} className="ng-scope">
                 Ghế
               </span>
-              {/* end ngIf: !isMobile */}
+
               <span className="title ng-binding" />
             </div>
             <div className="totalchair col-sm-5 col-xs-5 ng-binding">0 đ</div>
           </div>
-          {/* end ngIf: pCinemaId!=1 && !isAllowedStudentPrice */}
-          {/* ngIf: pCinemaId!=1 && combolist.length > 0 */}
-          {/* ngRepeat: ticket in ticketTypes */}
+
           <div className="infouser" style={{}}>
             {/* <div ng-if="isEmailValid" class="title">Email</div> */}
             <div className="row">
               <input
                 id="emailCheckout"
-                ng-paste="editEmail(userEmail)"
                 style={{ border: 0 }}
                 className="content col-sm-10 col-xs-10 ng-pristine ng-untouched ng-valid ng-not-empty ng-valid-required"
                 type="text"
-                ng-model="userEmail"
-                ng-change="editEmail(userEmail)"
                 required
               />
 
-              <label className="no-font-weight" htmlFor="emailCheckout"></label>
-              {/* ngIf: isShowClearEmail */}
+              <label className="no-font-weight" htmlFor="emailCheckout">
+                Email
+              </label>
             </div>
-
-            {/* ngIf: !isEmailValid */}
           </div>
           <div className="infouser" style={{}}>
-            {/* <div ng-if="isPhoneValid" class="title">Phone</div> */}
             <div className="row">
               <input
                 id="phoneCheckout"
-                ng-paste="editPhone(userPhone)"
                 style={{ border: 0 }}
                 className="content col-sm-10 col-xs-10 ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required"
                 type="text"
-                ng-model="userPhone"
-                ng-change="editPhone(userPhone)"
                 required
               />
               <label className="no-font-weight" htmlFor="phoneCheckout">
                 Phone
               </label>
-              {/* ngIf: isShowClearPhone */}
             </div>
-            {/* ngIf: !isPhoneValid */}
-            <div
-              ng-if="!isPhoneValid"
-              className="error phoneerror ng-binding ng-scope"
-            />
+
+            <div className="error phoneerror ng-binding ng-scope" />
             {/* end ngIf: !isPhoneValid */}
           </div>
           {/* ngIf: isNewApi */}
@@ -109,12 +115,9 @@ export default function DatVeMoiveMain(props) {
             <div className="row">
               <input
                 id="voucherPromotion"
-                ng-paste="editVoucher(userVoucher)"
                 style={{ border: 0 }}
                 className="content col-sm-10 col-xs-10 ng-pristine ng-untouched ng-valid ng-empty"
                 type="text"
-                ng-model="userVoucher"
-                ng-change="editVoucher(userVoucher)"
               />
               <label
                 className="no-font-weight js-voucher-label"
@@ -122,23 +125,16 @@ export default function DatVeMoiveMain(props) {
               >
                 Mã giảm giá
               </label>
-              {/* ngIf: isShowClearVoucher */}
-              {/* ngIf: !isShowClearVoucher */}
+
               <div
                 id="apply-voucher"
-                ng-class="'remove btn-apply-voucher' + (isDisableVoucher() ? '' : ' disabled')"
-                ng-if="!isShowClearVoucher"
-                ng-click="applyVoucher()"
                 className="ng-scope remove btn-apply-voucher disabled"
               >
                 Áp dụng
               </div>
-              {/* end ngIf: !isShowClearVoucher */}
             </div>
           </div>
-          {/* end ngIf: isNewApi */}
-          {/* ngIf: !isNewApi */}
-          {/* ngIf: isNewApi */}
+
           <div className="methodpay ng-scope" ng-if="isNewApi">
             <div className="titlemethodpay">
               Hình thức thanh toán
@@ -155,28 +151,15 @@ export default function DatVeMoiveMain(props) {
               className="chosenmethod ZALOPAY ng-hide first-class"
               data-name="Thanh toán qua ZaloPay"
               data-type="ZALOPAY"
-              ng-class="{'list': payment.is_list, 'first-class' : $first}"
-              ng-show="checkShowPayment(payment, totalPrice, combocost) || listseatchosencode.length!=0"
-              ng-repeat="payment in listPayment"
-              ng-click="choosePayment($event)"
             >
-              {/* ngIf: userMethodPay !== undefined */}
-              <div
-                className="paymentParent ng-scope"
-                ng-if="userMethodPay !== undefined"
-              >
+              <div className="paymentParent ng-scope">
                 <input
                   type="radio"
                   name="method"
                   defaultValue="ZALOPAY"
-                  ng-checked="true"
                   defaultChecked="checked"
                 />
-                <img
-                  className="icon"
-                  ng-src="https://s3img.vcdn.vn/123phim/2018/12/08075f42d0c4bfc8f2063a35d5b9fca7.jpg"
-                  src="https://s3img.vcdn.vn/123phim/2018/12/08075f42d0c4bfc8f2063a35d5b9fca7.jpg"
-                />
+
                 <div className="titlechosen ng-binding">
                   Thanh toán qua ZaloPay
                   {/* ngIf: payment.note */}
@@ -188,23 +171,14 @@ export default function DatVeMoiveMain(props) {
                       x3 vé BHD Star 59k/vé cho tất cả khách hàng
                     </div>
                   </div>
-                  {/* end ngIf: payment.note */}
                 </div>
-                {/* ngIf: payment.is_list */}
               </div>
-              {/* end ngIf: userMethodPay !== undefined */}
-              {/* ngIf: userMethodPay === undefined */}
-              {/* ngIf: payment.is_list */}
             </div>
-            {/* end ngRepeat: payment in listPayment */}
+
             <div
               className="chosenmethod CC ng-hide"
               data-name="Visa, Master, JCB"
               data-type="CC"
-              ng-class="{'list': payment.is_list, 'first-class' : $first}"
-              ng-show="checkShowPayment(payment, totalPrice, combocost) || listseatchosencode.length!=0"
-              ng-repeat="payment in listPayment"
-              ng-click="choosePayment($event)"
             >
               {/* ngIf: userMethodPay !== undefined */}
               <div
@@ -307,14 +281,10 @@ export default function DatVeMoiveMain(props) {
         {/* ngIf: !isEmailValid || !isPhoneValid || !isCheckedMethodPay() || !fullchosen || totalticket === 0  */}
         <div
           className="buyticket ng-binding ng-scope"
-          ng-click="checkoutInvalid()"
           style={{
-            backgroundColor: "#afafaf",
+            backgroundColor: "green",
             backgroundImage: "none",
-            cursor: "initial",
           }}
-          ng-if="!isEmailValid || !isPhoneValid || !isCheckedMethodPay() || !fullchosen || totalticket === 0 "
-          disabled
         >
           Đặt Vé
           {/* ngIf: loading */}
@@ -327,11 +297,7 @@ export default function DatVeMoiveMain(props) {
             <p className="seatchosen ng-binding" />
           </div>
           {/* end ngIf: pCinemaId!=1 */}
-          <div
-            className="continuebutton col-xs-6 disabled"
-            ng-class="{'disabled': (!isEmailValid || !isPhoneValid || !isCheckedMethodPay())}"
-            ng-click="continue()"
-          >
+          <div className="continuebutton col-xs-6 disabled">
             {/* ngIf: !loading */}
             <div className="title ng-scope" ng-if="!loading">
               ĐẶT VÉ
@@ -374,8 +340,6 @@ export default function DatVeMoiveMain(props) {
             <img
               ng-src="app/assets/img/icons/close_grey.png"
               className="logoclose ng-scope"
-              ng-click="closezalopay()"
-              ng-if="!cancelZaloPay"
               src="app/assets/img/icons/close_grey.png"
             />
             {/* end ngIf: !cancelZaloPay */}
@@ -397,12 +361,7 @@ export default function DatVeMoiveMain(props) {
               ></div>
               <div className="block-info">
                 <p className="filmname ng-binding">
-                  <span
-                    ng-class="{'ageType': true, 'ageType-general': film_age==0}"
-                    className="ng-binding ageType"
-                  >
-                    C18
-                  </span>
+                  <span className="ng-binding ageType">C18</span>
                   <span className="label version ng-binding">2D</span>
                   <span className="label version digital ng-binding">
                     Digital
@@ -569,7 +528,6 @@ export default function DatVeMoiveMain(props) {
         style={{}}
         ng-if="isNewApi && !isAllowedStudentPrice"
         ng-controller="CheckoutSeatV2Controller"
-        ng-include
         src="'app/checkout/seat/seatv2.html'"
         className="ng-scope"
       >
@@ -601,7 +559,8 @@ export default function DatVeMoiveMain(props) {
                   </div>
                 </div>
                 <br />
-                asdasdasdasdasdasdasd
+                {/* asdasdasdasdasdasdasd */}
+                {renderSeat()}
               </div>
             </div>
             <div className="noteseat">
