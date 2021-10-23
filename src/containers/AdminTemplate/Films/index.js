@@ -88,7 +88,7 @@ export default function Films() {
 	}
 	return (
 		<div className="container">
-			<h3>Quản lý phim</h3>
+			<h3>Quản lý phimd</h3>
 			<Table columns={columns} dataSource={data} onChange={onChange} />
 		</div>
 	)
