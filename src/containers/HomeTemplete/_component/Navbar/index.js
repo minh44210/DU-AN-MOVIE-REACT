@@ -56,15 +56,6 @@ export default class NavbarHome extends Component {
                       Ứng Dụng
                     </NavLink>
                   </li>
-                  <li className="nav-item mr-3">
-                    <NavLink
-                      activeClassName="btn1"
-                      className="nav-link"
-                      to="/chitietphongve/id"
-                    >
-                      Đặt Vé Online
-                    </NavLink>
-                  </li>
                 </ul>
                 <ul className=" navbar-nav ml-auto">
                   <li className="nav-item">

@@ -6,7 +6,6 @@ import { actMoiveMainApi } from "./Modules/actions";
 
 export default function DatVeMoiveMain(props) {
   const ThongTinMovie = useSelector((state) => state.MoiveMainReducer);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -20,17 +19,11 @@ export default function DatVeMoiveMain(props) {
   const renderSeat = () => {
     return data?.danhSachGhe?.map((ghe, index) => {
       let classGheVip = ghe.loaiGhe === "Vip" ? "gheVip" : "";
-      let classGheDaDat = ghe.daDat === true ? "gheDaDat" : "";
+      let classGheDaDat = ghe.daDat === "true" ? "gheDaDat" : "";
 
       return (
         <button
-          onClick={() => {
-            dispatch({
-              type: "DAT_VE",
-              gheDuocChon: ghe,
-            });
-          }}
-          disabled={ghe.daDat}
+          // disabled={ghe.daDat}
           className={`ghe ${classGheVip} ${classGheDaDat}`}
           key={index}
         >
@@ -594,7 +587,7 @@ export default function DatVeMoiveMain(props) {
                   <span className="titleview">Ghế trung tâm</span>
                 </span>
                 <span className="positionview">
-                  <span className="lineview linebeautiful" />
+                  <span className="lineview linebeautiful " />
                   <span className="titleview">Ghế Đẹp</span>
                 </span>
               </div>
