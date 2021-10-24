@@ -6,6 +6,8 @@ import { actMoiveMainApi } from "./Modules/actions";
 
 export default function DatVeMoiveMain(props) {
   const ThongTinMovie = useSelector((state) => state.MoiveMainReducer);
+  const dataDatghe = useSelector((state) => state.MoiveMainReducer);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -13,7 +15,9 @@ export default function DatVeMoiveMain(props) {
 
     dispatch(action);
   }, []);
-  console.log(ThongTinMovie, "123");
+  // console.log(ThongTinMovie, "123");
+  console.log(dataDatghe, "datadatghe");
+
   const { data } = ThongTinMovie;
 
   const renderSeat = () => {
@@ -22,11 +26,7 @@ export default function DatVeMoiveMain(props) {
       let classGheDaDat = ghe.daDat === "true" ? "gheDaDat" : "";
 
       return (
-        <button
-          // disabled={ghe.daDat}
-          className={`ghe ${classGheVip} ${classGheDaDat}`}
-          key={index}
-        >
+        <button className={`ghe ${classGheVip} ${classGheDaDat}`} key={index}>
           {ghe.stt}
         </button>
       );

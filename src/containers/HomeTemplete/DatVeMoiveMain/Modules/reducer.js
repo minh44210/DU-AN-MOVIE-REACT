@@ -31,6 +31,7 @@ const MoiveMainReducer = (state = initialState, action) => {
       state.loading = false;
       state.data = null;
       state.error = action.payload;
+      console.log(action);
       return { ...state };
     default:
       return { ...state };

@@ -91,7 +91,7 @@ function LoginHomePage(props) {
             </div>
 
             <div className="w-full text-center p-t-55">
-              <span className="txt2">Bạn mới tham gia Netflix? </span>
+              <span className="txt2">Bạn mới tham gia Mourim? </span>
               <a href="/dangky" className="txt2 bo1">
                 Đăng ký ngay.
               </a>
